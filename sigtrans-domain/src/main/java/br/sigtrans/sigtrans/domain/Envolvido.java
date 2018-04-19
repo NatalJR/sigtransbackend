@@ -71,7 +71,7 @@ public class Envolvido extends GumgaModelUUID {
 
     @Column(name = "cnh")
     private String cnh;
-
+    //comit test
     @Column(name = "validade_cnh")
     private String validadeCNH;
 
