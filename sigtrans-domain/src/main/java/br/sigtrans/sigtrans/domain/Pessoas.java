@@ -4,6 +4,7 @@ import io.gumga.domain.GumgaModelUUID;
 import io.gumga.domain.domains.GumgaPhoneNumber;
 
 
+import javax.annotation.WillClose;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -23,9 +24,6 @@ public class Pessoas extends GumgaModelUUID {
     @Column(name = "sexo")
     private String sexo;
 
-    @ManyToOne
-    private Rua endereco;
-
     @Column(name = "endereco_num")
     private String numero;
 
@@ -33,7 +31,10 @@ public class Pessoas extends GumgaModelUUID {
     private String complemento;
 
     @Column(name = "telefone")
-    private GumgaPhoneNumber telefone;
+    private String telefone;
+
+    @Column(name = "alergica")
+    private String  alergica;
 
     @Column(name = "profissao")
     private String profissao;
@@ -47,8 +48,8 @@ public class Pessoas extends GumgaModelUUID {
     @Column(name = "cpf")
     private String cpf;
 
-    @Column(name = "data_nasc")
-    private String data_nasc;
+    @Column(name = "dt_nasc")
+    private String dt_nasc;
 
     @Column(name = "cnh")
     private String cnh;
@@ -56,8 +57,27 @@ public class Pessoas extends GumgaModelUUID {
     @Column(name = "validade")
     private String validade;
 
-    @ManyToOne
-    private Cidade municipio;
+
+    @Column(name = "municipio")
+    private String municipio;
+
+    @Column(name = "alergica_desc")
+    private String alergica_desc;
+
+    @Column(name = "estrangeiro")
+    private String estrangeiro;
+
+    @Column(name = "latitude")
+    private String latitude;
+
+    @Column(name = "longitude")
+    private String longitude;
+
+    @Column(name = "estado")
+    private String estado;
+
+    @Column(name = "efetivo_extra")
+    private String esfetivo_extra;
 
     @Column(name = "nome_mae")
     private String nome_mae;
@@ -97,14 +117,6 @@ public class Pessoas extends GumgaModelUUID {
         this.sexo = sexo;
     }
 
-    public Rua getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Rua endereco) {
-        this.endereco = endereco;
-    }
-
     public String getNumero() {
         return numero;
     }
@@ -121,12 +133,20 @@ public class Pessoas extends GumgaModelUUID {
         this.complemento = complemento;
     }
 
-    public GumgaPhoneNumber getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(GumgaPhoneNumber telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public String getAlergica() {
+        return alergica;
+    }
+
+    public void setAlergica(String alergica) {
+        this.alergica = alergica;
     }
 
     public String getProfissao() {
@@ -161,12 +181,12 @@ public class Pessoas extends GumgaModelUUID {
         this.cpf = cpf;
     }
 
-    public String getData_nasc() {
-        return data_nasc;
+    public String getDt_nasc() {
+        return dt_nasc;
     }
 
-    public void setData_nasc(String data_nasc) {
-        this.data_nasc = data_nasc;
+    public void setDt_nasc(String dt_nasc) {
+        this.dt_nasc = dt_nasc;
     }
 
     public String getCnh() {
@@ -185,12 +205,60 @@ public class Pessoas extends GumgaModelUUID {
         this.validade = validade;
     }
 
-    public Cidade getMunicipio() {
+    public String getMunicipio() {
         return municipio;
     }
 
-    public void setMunicipio(Cidade municipio) {
+    public void setMunicipio(String municipio) {
         this.municipio = municipio;
+    }
+
+    public String getAlergica_desc() {
+        return alergica_desc;
+    }
+
+    public void setAlergica_desc(String alergica_desc) {
+        this.alergica_desc = alergica_desc;
+    }
+
+    public String getEstrangeiro() {
+        return estrangeiro;
+    }
+
+    public void setEstrangeiro(String estrangeiro) {
+        this.estrangeiro = estrangeiro;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getEsfetivo_extra() {
+        return esfetivo_extra;
+    }
+
+    public void setEsfetivo_extra(String esfetivo_extra) {
+        this.esfetivo_extra = esfetivo_extra;
     }
 
     public String getNome_mae() {

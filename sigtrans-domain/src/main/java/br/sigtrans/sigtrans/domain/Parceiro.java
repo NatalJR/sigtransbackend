@@ -6,6 +6,7 @@ import io.gumga.domain.domains.GumgaPhoneNumber;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Parceiro extends GumgaModelUUID {
@@ -13,10 +14,10 @@ public class Parceiro extends GumgaModelUUID {
     @Column(name = "nome_parceiro")
     private String nome;
 
-    @Column(name = "estado")
+    @ManyToOne
     private Estado estado;
 
-    @Column(name = "municipio")
+    @ManyToOne
     private Cidade cidade;
 
     @Column(name = "nome_contato")
