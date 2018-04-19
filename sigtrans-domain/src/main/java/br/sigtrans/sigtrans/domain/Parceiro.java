@@ -21,7 +21,7 @@ public class Parceiro extends GumgaModelUUID {
     private Cidade cidade;
 
     @Column(name = "nome_contato")
-    private String nome_contato;
+    private String nomeContato;
 
     @Column(name = "telefone_contato")
     private GumgaPhoneNumber telefone;
@@ -56,12 +56,12 @@ public class Parceiro extends GumgaModelUUID {
         this.cidade = cidade;
     }
 
-    public String getNome_contato() {
-        return nome_contato;
+    public String getNomeContato() {
+        return nomeContato;
     }
 
-    public void setNome_contato(String nome_contato) {
-        this.nome_contato = nome_contato;
+    public void setNomeContato(String nomeContato) {
+        this.nomeContato = nomeContato;
     }
 
     public GumgaPhoneNumber getTelefone() {

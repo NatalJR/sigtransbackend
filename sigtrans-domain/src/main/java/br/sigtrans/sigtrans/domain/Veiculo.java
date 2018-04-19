@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Veiculos extends GumgaModelUUID {
+public class Veiculo extends GumgaModelUUID {
 
     @ManyToOne
     private MarcaVeiculo marca;
@@ -19,13 +19,13 @@ public class Veiculos extends GumgaModelUUID {
     private String cnh;
 
     @Column(name = "numero_ocupantes")
-    private int numero_ocupantes;
+    private int numeroOcupantes;
 
     @Column(name = "numero_feridos")
-    private int numero_feridos;
+    private int numeroFeridos;
 
     @Column(name = "numero_obitos")
-    private int numero_obitos;
+    private int numeroObitos;
 
     @ManyToOne
     private CategoriaVeiculo categoria;
@@ -33,7 +33,7 @@ public class Veiculos extends GumgaModelUUID {
     @Column(name = "placa")
     private String placa;
 
-    public Veiculos() {
+    public Veiculo() {
     }
 
     public MarcaVeiculo getMarca() {
@@ -60,28 +60,28 @@ public class Veiculos extends GumgaModelUUID {
         this.cnh = cnh;
     }
 
-    public int getNumero_ocupantes() {
-        return numero_ocupantes;
+    public int getNumeroOcupantes() {
+        return numeroOcupantes;
     }
 
-    public void setNumero_ocupantes(int numero_ocupantes) {
-        this.numero_ocupantes = numero_ocupantes;
+    public void setNumeroOcupantes(int numeroOcupantes) {
+        this.numeroOcupantes = numeroOcupantes;
     }
 
-    public int getNumero_feridos() {
-        return numero_feridos;
+    public int getNumeroFeridos() {
+        return numeroFeridos;
     }
 
-    public void setNumero_feridos(int numero_feridos) {
-        this.numero_feridos = numero_feridos;
+    public void setNumeroFeridos(int numeroFeridos) {
+        this.numeroFeridos = numeroFeridos;
     }
 
-    public int getNumero_obitos() {
-        return numero_obitos;
+    public int getNumeroObitos() {
+        return numeroObitos;
     }
 
-    public void setNumero_obitos(int numero_obitos) {
-        this.numero_obitos = numero_obitos;
+    public void setNumeroObitos(int numeroObitos) {
+        this.numeroObitos = numeroObitos;
     }
 
     public CategoriaVeiculo getCategoria() {

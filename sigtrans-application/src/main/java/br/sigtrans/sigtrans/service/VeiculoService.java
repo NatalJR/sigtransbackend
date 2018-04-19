@@ -1,15 +1,15 @@
 package br.sigtrans.sigtrans.service;
 
-import br.sigtrans.sigtrans.domain.Veiculos;
+import br.sigtrans.sigtrans.domain.Veiculo;
 import io.gumga.application.GumgaService;
 import io.gumga.domain.repository.GumgaCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class VeiculosService extends GumgaService<Veiculos, String> {
+public class VeiculoService extends GumgaService<Veiculo, String> {
     @Autowired
-    public VeiculosService(GumgaCrudRepository<Veiculos, String> repository) {
+    public VeiculoService(GumgaCrudRepository<Veiculo, String> repository) {
         super(repository);
     }
 }

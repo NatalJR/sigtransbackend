@@ -22,31 +22,31 @@ public class Envolvido extends GumgaModelUUID {
     private Rua rua;
 
     @Column(name = "numero")
-    private  String numero;
+    private String numero;
 
     @Column(name = "nome_mae")
-    private String nome_mae;
+    private String nomeMae;
 
     @ManyToOne
-    private Veiculos veiculo;
+    private Veiculo veiculo;
 
     @ManyToOne
-    private PosicaoVeiculo posicao_veiculo;
+    private PosicaoVeiculo posicaoVeiculo;
 
     @ManyToOne
-    private CondicaoSeguranca condicao_seguranca;
+    private CondicaoSeguranca condicaoSeguranca;
 
     @ManyToOne
     private Lesoes lesao;
 
     @ManyToOne
-    private LocalEncaminhado local_encaminhado;
+    private LocalEncaminhado localEncaminhado;
 
     @Column(name = "documento") //RG
     private String documento;
 
     @Column(name = "orgao_exp")
-    private String orgao_exp;
+    private String orgaoExp;
 
     @Column(name = "sexo")
     private String sexo;
@@ -54,7 +54,7 @@ public class Envolvido extends GumgaModelUUID {
     @Column(name = "profissao")
     private String profissao;
 
-    @Column(name = "naciolnalidade")
+    @Column(name = "nacionalidade")
     private String nacionalidade;
 
     @ManyToOne
@@ -64,7 +64,7 @@ public class Envolvido extends GumgaModelUUID {
     private String cpf;
 
     @Column(name = "data_nasc")
-    private String data_nasc;
+    private String dataNascimento;
 
     @Column(name = "idade")
     private int idade;
@@ -73,7 +73,7 @@ public class Envolvido extends GumgaModelUUID {
     private String cnh;
 
     @Column(name = "validade_cnh")
-    private String validade_cnh;
+    private String validadeCNH;
 
     public Envolvido() {
     }
@@ -118,36 +118,36 @@ public class Envolvido extends GumgaModelUUID {
         this.numero = numero;
     }
 
-    public String getNome_mae() {
-        return nome_mae;
+    public String getNomeMae() {
+        return nomeMae;
     }
 
-    public void setNome_mae(String nome_mae) {
-        this.nome_mae = nome_mae;
+    public void setNomeMae(String nomeMae) {
+        this.nomeMae = nomeMae;
     }
 
-    public Veiculos getVeiculo() {
+    public Veiculo getVeiculo() {
         return veiculo;
     }
 
-    public void setVeiculo(Veiculos veiculo) {
+    public void setVeiculo(Veiculo veiculo) {
         this.veiculo = veiculo;
     }
 
-    public PosicaoVeiculo getPosicao_veiculo() {
-        return posicao_veiculo;
+    public PosicaoVeiculo getPosicaoVeiculo() {
+        return posicaoVeiculo;
     }
 
-    public void setPosicao_veiculo(PosicaoVeiculo posicao_veiculo) {
-        this.posicao_veiculo = posicao_veiculo;
+    public void setPosicaoVeiculo(PosicaoVeiculo posicaoVeiculo) {
+        this.posicaoVeiculo = posicaoVeiculo;
     }
 
-    public CondicaoSeguranca getCondicao_seguranca() {
-        return condicao_seguranca;
+    public CondicaoSeguranca getCondicaoSeguranca() {
+        return condicaoSeguranca;
     }
 
-    public void setCondicao_seguranca(CondicaoSeguranca condicao_seguranca) {
-        this.condicao_seguranca = condicao_seguranca;
+    public void setCondicaoSeguranca(CondicaoSeguranca condicaoSeguranca) {
+        this.condicaoSeguranca = condicaoSeguranca;
     }
 
     public Lesoes getLesao() {
@@ -158,12 +158,12 @@ public class Envolvido extends GumgaModelUUID {
         this.lesao = lesao;
     }
 
-    public LocalEncaminhado getLocal_encaminhado() {
-        return local_encaminhado;
+    public LocalEncaminhado getLocalEncaminhado() {
+        return localEncaminhado;
     }
 
-    public void setLocal_encaminhado(LocalEncaminhado local_encaminhado) {
-        this.local_encaminhado = local_encaminhado;
+    public void setLocalEncaminhado(LocalEncaminhado localEncaminhado) {
+        this.localEncaminhado = localEncaminhado;
     }
 
     public String getDocumento() {
@@ -174,12 +174,12 @@ public class Envolvido extends GumgaModelUUID {
         this.documento = documento;
     }
 
-    public String getOrgao_exp() {
-        return orgao_exp;
+    public String getOrgaoExp() {
+        return orgaoExp;
     }
 
-    public void setOrgao_exp(String orgao_exp) {
-        this.orgao_exp = orgao_exp;
+    public void setOrgaoExp(String orgaoExp) {
+        this.orgaoExp = orgaoExp;
     }
 
     public String getSexo() {
@@ -222,12 +222,12 @@ public class Envolvido extends GumgaModelUUID {
         this.cpf = cpf;
     }
 
-    public String getData_nasc() {
-        return data_nasc;
+    public String getDataNascimento() {
+        return dataNascimento;
     }
 
-    public void setData_nasc(String data_nasc) {
-        this.data_nasc = data_nasc;
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public int getIdade() {
@@ -246,11 +246,11 @@ public class Envolvido extends GumgaModelUUID {
         this.cnh = cnh;
     }
 
-    public String getValidade_cnh() {
-        return validade_cnh;
+    public String getValidadeCNH() {
+        return validadeCNH;
     }
 
-    public void setValidade_cnh(String validade_cnh) {
-        this.validade_cnh = validade_cnh;
+    public void setValidadeCNH(String validadeCNH) {
+        this.validadeCNH = validadeCNH;
     }
 }

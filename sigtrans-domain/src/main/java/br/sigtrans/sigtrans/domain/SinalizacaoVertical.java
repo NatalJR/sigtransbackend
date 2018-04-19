@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 @Entity
 public class SinalizacaoVertical extends GumgaModelUUID {
 
-    @Column(name = "nome_sianlizacao_vertical")
+    @Column(name = "nome_sinalizacao")
     private String nome;
 
     public SinalizacaoVertical() {

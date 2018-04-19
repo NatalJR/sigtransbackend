@@ -19,7 +19,7 @@ public class Pessoas extends GumgaModelUUID {
     private String documento;
 
     @Column(name = "orgao_exp")
-    private String orgao_exp;
+    private String orgaoExp;
 
     @Column(name = "sexo")
     private String sexo;
@@ -34,7 +34,7 @@ public class Pessoas extends GumgaModelUUID {
     private String telefone;
 
     @Column(name = "alergica")
-    private String  alergica;
+    private String alergica;
 
     @Column(name = "profissao")
     private String profissao;
@@ -49,20 +49,19 @@ public class Pessoas extends GumgaModelUUID {
     private String cpf;
 
     @Column(name = "dt_nasc")
-    private String dt_nasc;
+    private String dataNascimento;
 
     @Column(name = "cnh")
     private String cnh;
 
-    @Column(name = "validade")
-    private String validade;
-
+    @Column(name = "validade_cnh")
+    private String validadeCNH;
 
     @Column(name = "municipio")
     private String municipio;
 
     @Column(name = "alergica_desc")
-    private String alergica_desc;
+    private String alergicaDesc;
 
     @Column(name = "estrangeiro")
     private String estrangeiro;
@@ -77,10 +76,10 @@ public class Pessoas extends GumgaModelUUID {
     private String estado;
 
     @Column(name = "efetivo_extra")
-    private String esfetivo_extra;
+    private String efetivoExtra;
 
     @Column(name = "nome_mae")
-    private String nome_mae;
+    private String nomeMae;
 
     public Pessoas() {
     }
@@ -101,12 +100,12 @@ public class Pessoas extends GumgaModelUUID {
         this.documento = documento;
     }
 
-    public String getOrgao_exp() {
-        return orgao_exp;
+    public String getOrgaoExp() {
+        return orgaoExp;
     }
 
-    public void setOrgao_exp(String orgao_exp) {
-        this.orgao_exp = orgao_exp;
+    public void setOrgaoExp(String orgaoExp) {
+        this.orgaoExp = orgaoExp;
     }
 
     public String getSexo() {
@@ -181,12 +180,12 @@ public class Pessoas extends GumgaModelUUID {
         this.cpf = cpf;
     }
 
-    public String getDt_nasc() {
-        return dt_nasc;
+    public String getDataNascimento() {
+        return dataNascimento;
     }
 
-    public void setDt_nasc(String dt_nasc) {
-        this.dt_nasc = dt_nasc;
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public String getCnh() {
@@ -197,12 +196,12 @@ public class Pessoas extends GumgaModelUUID {
         this.cnh = cnh;
     }
 
-    public String getValidade() {
-        return validade;
+    public String getValidadeCNH() {
+        return validadeCNH;
     }
 
-    public void setValidade(String validade) {
-        this.validade = validade;
+    public void setValidadeCNH(String validadeCNH) {
+        this.validadeCNH = validadeCNH;
     }
 
     public String getMunicipio() {
@@ -213,12 +212,12 @@ public class Pessoas extends GumgaModelUUID {
         this.municipio = municipio;
     }
 
-    public String getAlergica_desc() {
-        return alergica_desc;
+    public String getAlergicaDesc() {
+        return alergicaDesc;
     }
 
-    public void setAlergica_desc(String alergica_desc) {
-        this.alergica_desc = alergica_desc;
+    public void setAlergicaDesc(String alergicaDesc) {
+        this.alergicaDesc = alergicaDesc;
     }
 
     public String getEstrangeiro() {
@@ -253,19 +252,19 @@ public class Pessoas extends GumgaModelUUID {
         this.estado = estado;
     }
 
-    public String getEsfetivo_extra() {
-        return esfetivo_extra;
+    public String getEfetivoExtra() {
+        return efetivoExtra;
     }
 
-    public void setEsfetivo_extra(String esfetivo_extra) {
-        this.esfetivo_extra = esfetivo_extra;
+    public void setEfetivoExtra(String efetivoExtra) {
+        this.efetivoExtra = efetivoExtra;
     }
 
-    public String getNome_mae() {
-        return nome_mae;
+    public String getNomeMae() {
+        return nomeMae;
     }
 
-    public void setNome_mae(String nome_mae) {
-        this.nome_mae = nome_mae;
+    public void setNomeMae(String nomeMae) {
+        this.nomeMae = nomeMae;
     }
 }
