@@ -1,9 +1,9 @@
 package br.sigtrans.sigtrans.repository;
 
-import br.sigtrans.sigtrans.domain.Veiculos;
+import br.sigtrans.sigtrans.domain.Veiculo;
 import io.gumga.domain.repository.GumgaCrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface VeiculosRepository extends GumgaCrudRepository<Veiculos, String> {
+public interface VeiculoRepository extends GumgaCrudRepository<Veiculo, String> {
 }
