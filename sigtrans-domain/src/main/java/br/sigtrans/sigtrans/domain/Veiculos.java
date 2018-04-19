@@ -33,6 +33,9 @@ public class Veiculos extends GumgaModelUUID {
     @Column(name = "placa")
     private String placa;
 
+
+    //branch testing
+
     public Veiculos() {
     }
 
