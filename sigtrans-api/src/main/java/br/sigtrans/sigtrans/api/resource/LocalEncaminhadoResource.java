@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/localencaminhado")
 public class LocalEncaminhadoResource extends GumgaAPI<LocalEncaminhado, String> {
-
     @Autowired
     public LocalEncaminhadoResource(@Qualifier("localEncaminhadoService") GumgaService<LocalEncaminhado, String> service) {
         super(service);
