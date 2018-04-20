@@ -13,7 +13,7 @@ public class Rua extends GumgaModelUUID {
     private String nome;
 
     @ManyToOne
-    private Bairro bairro;
+    private Cidade cidade;
 
     public Rua() {
     }
@@ -26,11 +26,11 @@ public class Rua extends GumgaModelUUID {
         this.nome = nome;
     }
 
-    public Bairro getBairro() {
-        return bairro;
+    public Cidade getCidade() {
+        return cidade;
     }
 
-    public void setBairro(Bairro bairro) {
-        this.bairro = bairro;
+    public void setCidade(Cidade cidade) {
+        this.cidade = cidade;
     }
 }
