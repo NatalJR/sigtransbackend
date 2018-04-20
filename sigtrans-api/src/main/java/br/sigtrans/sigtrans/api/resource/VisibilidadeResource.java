@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/visibilidade")
-public class VisibilidadeResource extends GumgaAPI {
+public class VisibilidadeResource extends GumgaAPI<Visibilidade, String> {
     @Autowired
     public VisibilidadeResource(@Qualifier("visibilidadeService")GumgaService<Visibilidade, String> service) {
         super(service);
