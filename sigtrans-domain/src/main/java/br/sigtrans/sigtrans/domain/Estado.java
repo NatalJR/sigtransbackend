@@ -8,6 +8,9 @@ import javax.persistence.Entity;
 @Entity
 public class Estado extends GumgaModelUUID {
 
+    @Column(name = "id_parceiro")
+    private String idParceiro;
+
     @Column(name="nome_estado")
     private String nome;
 
@@ -31,5 +34,13 @@ public class Estado extends GumgaModelUUID {
 
     public void setSigla(String sigla) {
         this.sigla = sigla;
+    }
+
+    public String getIdParceiro() {
+        return idParceiro;
+    }
+
+    public void setIdParceiro(String idParceiro) {
+        this.idParceiro = idParceiro;
     }
 }
