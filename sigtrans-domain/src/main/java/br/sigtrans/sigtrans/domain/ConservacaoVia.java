@@ -6,12 +6,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
-public class ConservacaoPista extends GumgaModelUUID {
+public class ConservacaoVia extends GumgaModelUUID {
 
-    @Column(name = "nome_conservacao_pista")
+    @Column(name = "nome_conservacao_via")
     private String nome;
 
-    public ConservacaoPista() {
+    public ConservacaoVia() {
     }
 
     public String getNome() {

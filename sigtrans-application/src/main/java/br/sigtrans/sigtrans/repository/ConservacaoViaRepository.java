@@ -1,9 +1,9 @@
 package br.sigtrans.sigtrans.repository;
 
-import br.sigtrans.sigtrans.domain.ConservacaoPista;
+import br.sigtrans.sigtrans.domain.ConservacaoVia;
 import io.gumga.domain.repository.GumgaCrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ConservacaoPistaRepository extends GumgaCrudRepository<ConservacaoPista, String> {
+public interface ConservacaoViaRepository extends GumgaCrudRepository<ConservacaoVia, String> {
 }
