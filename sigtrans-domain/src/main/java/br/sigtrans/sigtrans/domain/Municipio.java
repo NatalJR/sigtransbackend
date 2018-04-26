@@ -7,15 +7,15 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Cidade extends GumgaModelUUID {
+public class Municipio extends GumgaModelUUID {
 
-    @Column(name = "nome_cidade")
+    @Column(name = "nome_municipio")
     private String nome;
 
     @ManyToOne
     private Estado estado;
 
-    public Cidade() {
+    public Municipio() {
     }
 
     public String getNome() {

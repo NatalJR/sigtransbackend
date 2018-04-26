@@ -18,7 +18,7 @@ public class Parceiro extends GumgaModelUUID {
     private Estado estado;
 
     @ManyToOne
-    private Cidade cidade;
+    private Municipio municipio;
 
     @Column(name = "nome_contato")
     private String nomeContato;
@@ -48,12 +48,12 @@ public class Parceiro extends GumgaModelUUID {
         this.estado = estado;
     }
 
-    public Cidade getCidade() {
-        return cidade;
+    public Municipio getMunicipio() {
+        return municipio;
     }
 
-    public void setCidade(Cidade cidade) {
-        this.cidade = cidade;
+    public void setMunicipio(Municipio municipio) {
+        this.municipio = municipio;
     }
 
     public String getNomeContato() {

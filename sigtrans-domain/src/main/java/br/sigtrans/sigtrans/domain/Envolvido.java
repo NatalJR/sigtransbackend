@@ -5,6 +5,7 @@ import io.gumga.domain.GumgaModelUUID;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Envolvido extends GumgaModelUUID {
@@ -16,7 +17,7 @@ public class Envolvido extends GumgaModelUUID {
     private Estado estado;
 
     @ManyToOne
-    private Cidade cidade;
+    private Municipio municipio;
 
     @ManyToOne
     private Rua rua;
@@ -36,11 +37,7 @@ public class Envolvido extends GumgaModelUUID {
     @ManyToOne
     private CondicaoSeguranca condicaoSeguranca;
 
-    @ManyToOne
-    private Lesoes lesao;
 
-    @ManyToOne
-    private LocalEncaminhado localEncaminhado;
 
     @Column(name = "documento") //RG
     private String documento;
@@ -94,12 +91,12 @@ public class Envolvido extends GumgaModelUUID {
         this.estado = estado;
     }
 
-    public Cidade getCidade() {
-        return cidade;
+    public Municipio getMunicipio() {
+        return municipio;
     }
 
-    public void setCidade(Cidade cidade) {
-        this.cidade = cidade;
+    public void setMunicipio(Municipio municipio) {
+        this.municipio = municipio;
     }
 
     public Rua getRua() {
@@ -148,22 +145,6 @@ public class Envolvido extends GumgaModelUUID {
 
     public void setCondicaoSeguranca(CondicaoSeguranca condicaoSeguranca) {
         this.condicaoSeguranca = condicaoSeguranca;
-    }
-
-    public Lesoes getLesao() {
-        return lesao;
-    }
-
-    public void setLesao(Lesoes lesao) {
-        this.lesao = lesao;
-    }
-
-    public LocalEncaminhado getLocalEncaminhado() {
-        return localEncaminhado;
-    }
-
-    public void setLocalEncaminhado(LocalEncaminhado localEncaminhado) {
-        this.localEncaminhado = localEncaminhado;
     }
 
     public String getDocumento() {
@@ -253,4 +234,6 @@ public class Envolvido extends GumgaModelUUID {
     public void setValidadeCNH(String validadeCNH) {
         this.validadeCNH = validadeCNH;
     }
+
+
 }
