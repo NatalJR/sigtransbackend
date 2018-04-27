@@ -13,7 +13,8 @@ public class DadosEstatisticos extends GumgaModelUUID {
     @Column(name = "zona")
     private String zona;
 
-    //acidente trabalho
+    @Column(name = "acidente_trabalho")
+    private int acidenteTrabalho;
 
     @ManyToOne
     private TipoAcidente tipoAcidente;
@@ -21,29 +22,7 @@ public class DadosEstatisticos extends GumgaModelUUID {
     @ManyToOne
     private ClassificacaoAcidente classificacaoAcidente;
 
-    @ManyToOne
-    private CondicoesClimaticas condicaoClimatica;
-
-    @ManyToOne
-    private SentidoVia sentidoVia;
-
-    @ManyToOne
-    private ConservacaoVia conservacaoVia;
-
-    @ManyToOne
-    private Sinalizacao sinalizacao;
-
-    @Column(name = "velocidade_maxima")
-    private int velocidadeMaxima;
-
-    @ManyToOne
-    private Visibilidade visibilidade;
-
-    @ManyToOne
-    private PerfilPista perfilPista;
-
-    @Column(name = "informacoes_aicionais")
-    private String informacoesAdicionais;
+    //Via
 
     public DadosEstatisticos() {
     }
@@ -54,6 +33,14 @@ public class DadosEstatisticos extends GumgaModelUUID {
 
     public void setZona(String zona) {
         this.zona = zona;
+    }
+
+    public int getAcidenteTrabalho() {
+        return acidenteTrabalho;
+    }
+
+    public void setAcidenteTrabalho(int acidenteTrabalho) {
+        this.acidenteTrabalho = acidenteTrabalho;
     }
 
     public TipoAcidente getTipoAcidente() {
@@ -70,69 +57,5 @@ public class DadosEstatisticos extends GumgaModelUUID {
 
     public void setClassificacaoAcidente(ClassificacaoAcidente classificacaoAcidente) {
         this.classificacaoAcidente = classificacaoAcidente;
-    }
-
-    public CondicoesClimaticas getCondicaoClimatica() {
-        return condicaoClimatica;
-    }
-
-    public void setCondicaoClimatica(CondicoesClimaticas condicaoClimatica) {
-        this.condicaoClimatica = condicaoClimatica;
-    }
-
-    public SentidoVia getSentidoVia() {
-        return sentidoVia;
-    }
-
-    public void setSentidoVia(SentidoVia sentidoVia) {
-        this.sentidoVia = sentidoVia;
-    }
-
-    public ConservacaoVia getConservacaoVia() {
-        return conservacaoVia;
-    }
-
-    public void setConservacaoVia(ConservacaoVia conservacaoVia) {
-        this.conservacaoVia = conservacaoVia;
-    }
-
-    public Sinalizacao getSinalizacao() {
-        return sinalizacao;
-    }
-
-    public void setSinalizacao(Sinalizacao sinalizacao) {
-        this.sinalizacao = sinalizacao;
-    }
-
-    public int getVelocidadeMaxima() {
-        return velocidadeMaxima;
-    }
-
-    public void setVelocidadeMaxima(int velocidadeMaxima) {
-        this.velocidadeMaxima = velocidadeMaxima;
-    }
-
-    public Visibilidade getVisibilidade() {
-        return visibilidade;
-    }
-
-    public void setVisibilidade(Visibilidade visibilidade) {
-        this.visibilidade = visibilidade;
-    }
-
-    public PerfilPista getPerfilPista() {
-        return perfilPista;
-    }
-
-    public void setPerfilPista(PerfilPista perfilPista) {
-        this.perfilPista = perfilPista;
-    }
-
-    public String getInformacoesAdicionais() {
-        return informacoesAdicionais;
-    }
-
-    public void setInformacoesAdicionais(String informacoesAdicionais) {
-        this.informacoesAdicionais = informacoesAdicionais;
     }
 }
