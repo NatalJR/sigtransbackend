@@ -37,8 +37,6 @@ public class Envolvido extends GumgaModelUUID {
     @ManyToOne
     private CondicaoSeguranca condicaoSeguranca;
 
-
-
     @Column(name = "documento") //RG
     private String documento;
 
