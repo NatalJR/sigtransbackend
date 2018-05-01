@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 
 @Entity
 public class Pavimentacao extends GumgaModelUUID {
+
     @Column(name = "nome_pavimentacao")
     private String nome;
 
