@@ -15,9 +15,6 @@ public class Veiculo extends GumgaModelUUID {
     @ManyToOne
     private ModeloVeiculo modelo;
 
-    @Column(name = "cnh")
-    private String cnh;
-
     @Column(name = "numero_ocupantes")
     private int numeroOcupantes;
 
@@ -32,6 +29,9 @@ public class Veiculo extends GumgaModelUUID {
 
     @Column(name = "placa")
     private String placa;
+
+    @ManyToOne
+    private Envolvido condutor;
 
     public Veiculo() {
     }
@@ -50,14 +50,6 @@ public class Veiculo extends GumgaModelUUID {
 
     public void setModelo(ModeloVeiculo modelo) {
         this.modelo = modelo;
-    }
-
-    public String getCnh() {
-        return cnh;
-    }
-
-    public void setCnh(String cnh) {
-        this.cnh = cnh;
     }
 
     public int getNumeroOcupantes() {
@@ -98,5 +90,13 @@ public class Veiculo extends GumgaModelUUID {
 
     public void setPlaca(String placa) {
         this.placa = placa;
+    }
+
+    public Envolvido getCondutor() {
+        return condutor;
+    }
+
+    public void setCondutor(Envolvido condutor) {
+        this.condutor = condutor;
     }
 }
