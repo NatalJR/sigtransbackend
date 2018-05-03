@@ -4,7 +4,7 @@ import io.gumga.domain.GumgaModelUUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Via extends GumgaModelUUID {
@@ -12,43 +12,43 @@ public class Via extends GumgaModelUUID {
     @Column(name = "faixas")
     private int faixas;
 
-    @OneToMany
+    @ManyToOne
     private TipoVia tipoVia;
 
-    @OneToMany
+    @ManyToOne
     private Pavimentacao pavimentacao;
 
-    @OneToMany
+    @ManyToOne
     private ConservacaoVia conservacaoVia;
 
-    @OneToMany
+    @ManyToOne
     private SentidoVia sentidoVia;
 
-    @OneToMany
+    @ManyToOne
     private Semaforo semaforo;
 
-    @OneToMany
+    @ManyToOne
     private PerfilPista perfilPista;
 
-    @OneToMany
+    @ManyToOne
     private Superficie superficie;
 
-    @OneToMany
+    @ManyToOne
     private EquipamentoControleTrafego equipamentoControleTrafego;
 
-    @OneToMany
+    @ManyToOne
     private SeparacaoPista separacaoPista;
 
-    @OneToMany
+    @ManyToOne
     private Visibilidade visibilidade;
 
-    @OneToMany
+    @ManyToOne
     private Acostamento acostamento;
 
-    @OneToMany
+    @ManyToOne
     private Sinalizacao sinalizacao;
 
-    @OneToMany
+    @ManyToOne
     private SinaisPneus sinaisPneus;
 
     @Column(name = "velocidade_maxima")

@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import java.util.List;
 
 @Entity
 public class DadosEstatisticos extends GumgaModelUUID {
@@ -22,7 +23,8 @@ public class DadosEstatisticos extends GumgaModelUUID {
     @ManyToOne
     private ClassificacaoAcidente classificacaoAcidente;
 
-    //Via
+    @OneToMany
+    private List<Via> vias;
 
     public DadosEstatisticos() {
     }
@@ -57,5 +59,13 @@ public class DadosEstatisticos extends GumgaModelUUID {
 
     public void setClassificacaoAcidente(ClassificacaoAcidente classificacaoAcidente) {
         this.classificacaoAcidente = classificacaoAcidente;
+    }
+
+    public List<Via> getVias() {
+        return vias;
+    }
+
+    public void setVias(List<Via> vias) {
+        this.vias = vias;
     }
 }

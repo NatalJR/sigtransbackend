@@ -1,17 +1,11 @@
 package br.sigtrans.sigtrans.domain;
 
-import io.gumga.domain.GumgaModelUUID;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 
 @Entity
-public class Vitima extends GumgaModelUUID {
-
-    @OneToOne
-    private Envolvido envolvido;
+public class Vitima extends Envolvido {
 
     @ManyToOne
     private Lesoes lesao;
@@ -23,14 +17,6 @@ public class Vitima extends GumgaModelUUID {
     private int aih;
 
     public Vitima() {
-    }
-
-    public Envolvido getEnvolvido() {
-        return envolvido;
-    }
-
-    public void setEnvolvido(Envolvido envolvido) {
-        this.envolvido = envolvido;
     }
 
     public Lesoes getLesao() {
