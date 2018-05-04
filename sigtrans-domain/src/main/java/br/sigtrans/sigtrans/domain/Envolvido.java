@@ -5,7 +5,6 @@ import io.gumga.domain.GumgaModelUUID;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 
 @Entity
 public class Envolvido extends GumgaModelUUID {
@@ -66,9 +65,15 @@ public class Envolvido extends GumgaModelUUID {
 
     @Column(name = "cnh")
     private String cnh;
-    //comit test
+
     @Column(name = "validade_cnh")
     private String validadeCNH;
+
+    @Column(name = "etilometria")
+    private Double etilometria;
+
+    @ManyToOne
+    private GrauInstrucao grauInstrucao;
 
     public Envolvido() {
     }
@@ -233,5 +238,19 @@ public class Envolvido extends GumgaModelUUID {
         this.validadeCNH = validadeCNH;
     }
 
+    public Double getEtilometria() {
+        return etilometria;
+    }
 
+    public void setEtilometria(Double etilometria) {
+        this.etilometria = etilometria;
+    }
+
+    public GrauInstrucao getGrauInstrucao() {
+        return grauInstrucao;
+    }
+
+    public void setGrauInstrucao(GrauInstrucao grauInstrucao) {
+        this.grauInstrucao = grauInstrucao;
+    }
 }

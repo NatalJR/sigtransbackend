@@ -33,6 +33,12 @@ public class Veiculo extends GumgaModelUUID {
     @ManyToOne
     private Envolvido condutor;
 
+    @ManyToOne
+    private Estado estado;
+
+    @ManyToOne
+    private Municipio municipio;
+
     public Veiculo() {
     }
 
@@ -98,5 +104,21 @@ public class Veiculo extends GumgaModelUUID {
 
     public void setCondutor(Envolvido condutor) {
         this.condutor = condutor;
+    }
+
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
+
+    public Municipio getMunicipio() {
+        return municipio;
+    }
+
+    public void setMunicipio(Municipio municipio) {
+        this.municipio = municipio;
     }
 }
