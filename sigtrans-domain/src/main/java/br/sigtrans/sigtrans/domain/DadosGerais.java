@@ -47,6 +47,15 @@ public class DadosGerais extends GumgaModelUUID {
     @Column(name = "longitude")
     private String longitude;
 
+    @Column(name = "informacoes_adicionais")
+    private String informacoesAdicionais;
+
+    @Column(name = "rgo_bombeiros")
+    private String rgoBombeiros;
+
+    @Column(name = "protocolo_bateu")
+    private String protocoloBateu;
+
     public DadosGerais() {
     }
 
@@ -144,5 +153,37 @@ public class DadosGerais extends GumgaModelUUID {
 
     public void setLongitude(String longitude) {
         this.longitude = longitude;
+    }
+
+    public Rua getCruzamento() {
+        return cruzamento;
+    }
+
+    public void setCruzamento(Rua cruzamento) {
+        this.cruzamento = cruzamento;
+    }
+
+    public String getInformacoesAdicionais() {
+        return informacoesAdicionais;
+    }
+
+    public void setInformacoesAdicionais(String informacoesAdicionais) {
+        this.informacoesAdicionais = informacoesAdicionais;
+    }
+
+    public String getRgoBombeiros() {
+        return rgoBombeiros;
+    }
+
+    public void setRgoBombeiros(String rgoBombeiros) {
+        this.rgoBombeiros = rgoBombeiros;
+    }
+
+    public String getProtocoloBateu() {
+        return protocoloBateu;
+    }
+
+    public void setProtocoloBateu(String protocoloBateu) {
+        this.protocoloBateu = protocoloBateu;
     }
 }

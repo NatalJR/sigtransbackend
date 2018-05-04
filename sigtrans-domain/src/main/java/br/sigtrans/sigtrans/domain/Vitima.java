@@ -14,7 +14,7 @@ public class Vitima extends Envolvido {
     private LocalEncaminhado localEncaminhado;
 
     @Column(name = "aih")
-    private int aih;
+    private String aih;
 
     public Vitima() {
     }
@@ -35,11 +35,11 @@ public class Vitima extends Envolvido {
         this.localEncaminhado = localEncaminhado;
     }
 
-    public int getAih() {
+    public String getAih() {
         return aih;
     }
 
-    public void setAih(int aih) {
+    public void setAih(String aih) {
         this.aih = aih;
     }
 }
