@@ -1,94 +1,118 @@
 package br.sigtrans.sigtrans.domain;
 
-import io.gumga.domain.GumgaModelUUID;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.Embeddable;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import java.util.Date;
 
-@Entity
-public class DadosGerais extends GumgaModelUUID {
+@Embeddable
+public class DadosGerais {
 
-    @Column(name = "data")
-    private Date data;
+    private Date dataHora;
+    private Date dataHoraSigtrans;
+    //    private String hora;
+//    private String horaSigtrans;
+    private String pontoReferencia;
 
-    @Column(name = "hora")
-    private String hora;
+    //    Não precisa ser BigDecimal
+    private Double latitude;
+    private Double longitude;
 
-    @Column(name = "data_sigtrans")
-    private Date dataSigtrans;
-
-    @Column(name = "hora_sigtrans")
-    private String horaSigtrans;
+    private String informacoesAdicionais;
+    private String rgoBombeiros;
+    private String protocoloBateu;
 
     @ManyToOne
     private Estado estado;
-
     @ManyToOne
     private Municipio municipio;
-
     @ManyToOne
     private Bairro bairro;
-
     @ManyToOne
     private Rua rua;
-
     @ManyToOne
     private Rua cruzamento;
-
-    @Column(name = "ponto_referencia")
-    private String pontoReferencia;
-
-    @Column(name = "latitude")
-    private String latitude;
-
-    @Column(name = "longitude")
-    private String longitude;
-
-    @Column(name = "informacoes_adicionais")
-    private String informacoesAdicionais;
-
-    @Column(name = "rgo_bombeiros")
-    private String rgoBombeiros;
-
-    @Column(name = "protocolo_bateu")
-    private String protocoloBateu;
 
     public DadosGerais() {
     }
 
-    public Date getData() {
-        return data;
+    public DadosGerais(Date dataHora, Date dataHoraSigtrans, String pontoReferencia, Double latitude, Double longitude, String informacoesAdicionais, String rgoBombeiros, String protocoloBateu, Estado estado, Municipio municipio, Bairro bairro, Rua rua, Rua cruzamento) {
+        this.dataHora = dataHora;
+        this.dataHoraSigtrans = dataHoraSigtrans;
+        this.pontoReferencia = pontoReferencia;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.informacoesAdicionais = informacoesAdicionais;
+        this.rgoBombeiros = rgoBombeiros;
+        this.protocoloBateu = protocoloBateu;
+        this.estado = estado;
+        this.municipio = municipio;
+        this.bairro = bairro;
+        this.rua = rua;
+        this.cruzamento = cruzamento;
     }
 
-    public void setData(Date data) {
-        this.data = data;
+    public Date getDataHora() {
+        return dataHora;
     }
 
-    public String getHora() {
-        return hora;
+    public void setDataHora(Date dataHora) {
+        this.dataHora = dataHora;
     }
 
-    public void setHora(String hora) {
-        this.hora = hora;
+    public Date getDataHoraSigtrans() {
+        return dataHoraSigtrans;
     }
 
-    public Date getDataSigtrans() {
-        return dataSigtrans;
+    public void setDataHoraSigtrans(Date dataHoraSigtrans) {
+        this.dataHoraSigtrans = dataHoraSigtrans;
     }
 
-    public void setDataSigtrans(Date dataSigtrans) {
-        this.dataSigtrans = dataSigtrans;
+    public String getPontoReferencia() {
+        return pontoReferencia;
     }
 
-    public String getHoraSigtrans() {
-        return horaSigtrans;
+    public void setPontoReferencia(String pontoReferencia) {
+        this.pontoReferencia = pontoReferencia;
     }
 
-    public void setHoraSigtrans(String horaSigtrans) {
-        this.horaSigtrans = horaSigtrans;
+    public Double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getInformacoesAdicionais() {
+        return informacoesAdicionais;
+    }
+
+    public void setInformacoesAdicionais(String informacoesAdicionais) {
+        this.informacoesAdicionais = informacoesAdicionais;
+    }
+
+    public String getRgoBombeiros() {
+        return rgoBombeiros;
+    }
+
+    public void setRgoBombeiros(String rgoBombeiros) {
+        this.rgoBombeiros = rgoBombeiros;
+    }
+
+    public String getProtocoloBateu() {
+        return protocoloBateu;
+    }
+
+    public void setProtocoloBateu(String protocoloBateu) {
+        this.protocoloBateu = protocoloBateu;
     }
 
     public Estado getEstado() {
@@ -123,67 +147,11 @@ public class DadosGerais extends GumgaModelUUID {
         this.rua = rua;
     }
 
-    public Rua getCurzamento() {
-        return cruzamento;
-    }
-
-    public void setCurzamento(Rua cruzamento) {
-        this.cruzamento = cruzamento;
-    }
-
-    public String getPontoReferencia() {
-        return pontoReferencia;
-    }
-
-    public void setPontoReferencia(String pontoReferencia) {
-        this.pontoReferencia = pontoReferencia;
-    }
-
-    public String getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(String latitude) {
-        this.latitude = latitude;
-    }
-
-    public String getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(String longitude) {
-        this.longitude = longitude;
-    }
-
     public Rua getCruzamento() {
         return cruzamento;
     }
 
     public void setCruzamento(Rua cruzamento) {
         this.cruzamento = cruzamento;
-    }
-
-    public String getInformacoesAdicionais() {
-        return informacoesAdicionais;
-    }
-
-    public void setInformacoesAdicionais(String informacoesAdicionais) {
-        this.informacoesAdicionais = informacoesAdicionais;
-    }
-
-    public String getRgoBombeiros() {
-        return rgoBombeiros;
-    }
-
-    public void setRgoBombeiros(String rgoBombeiros) {
-        this.rgoBombeiros = rgoBombeiros;
-    }
-
-    public String getProtocoloBateu() {
-        return protocoloBateu;
-    }
-
-    public void setProtocoloBateu(String protocoloBateu) {
-        this.protocoloBateu = protocoloBateu;
     }
 }

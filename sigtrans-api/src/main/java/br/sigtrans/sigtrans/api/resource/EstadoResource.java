@@ -15,6 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/estado")
 public class EstadoResource extends GumgaAPI<Estado, String>{
+
     @Autowired
     public EstadoResource(@Qualifier("estadoService")GumgaService<Estado, String> service){
         super(service);
@@ -24,4 +25,5 @@ public class EstadoResource extends GumgaAPI<Estado, String>{
     public List<Estado> BuscarEstadoGQuery(@RequestParam String nome) {
         return ((EstadoService) service).buscarEstadoPorNomeGQuery(nome);
     }
+
 }

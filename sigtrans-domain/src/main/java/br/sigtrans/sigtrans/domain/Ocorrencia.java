@@ -2,28 +2,32 @@ package br.sigtrans.sigtrans.domain;
 
 import io.gumga.domain.GumgaModelUUID;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Ocorrencia extends GumgaModelUUID {
 
-    @OneToOne
+    @Embedded
     private DadosGerais dadosGerais;
 
-    @OneToOne
+    @Embedded
     private DadosEstatisticos dadosEstatisticos;
 
-    @ManyToMany
-    private List<Envolvido> envolvidos;
+    @ManyToMany(fetch = FetchType.EAGER)
+//    @JoinColumn(name = "ocorrencia_id")
+    private Set<Envolvido> envolvidos;
 
-    @ManyToMany
-    private List<Parceiro> parceiros;
+    @ManyToMany(fetch = FetchType.EAGER)
+//    @JoinColumn(name = "ocorrencia_id")
+    private Set<Parceiro> parceiros;
 
-    @ManyToMany
-    private List<Veiculo> veiculos;
+    @ManyToMany(fetch = FetchType.EAGER)
+//    @JoinColumn(name = "ocorrencia_id")
+    private Set<Veiculo> veiculos;
 
     public Ocorrencia() {
     }
@@ -44,27 +48,27 @@ public class Ocorrencia extends GumgaModelUUID {
         this.dadosEstatisticos = dadosEstatisticos;
     }
 
-    public List<Envolvido> getEnvolvidos() {
+    public Set<Envolvido> getEnvolvidos() {
         return envolvidos;
     }
 
-    public void setEnvolvidos(List<Envolvido> envolvidos) {
+    public void setEnvolvidos(Set<Envolvido> envolvidos) {
         this.envolvidos = envolvidos;
     }
 
-    public List<Parceiro> getParceiros() {
+    public Set<Parceiro> getParceiros() {
         return parceiros;
     }
 
-    public void setParceiros(List<Parceiro> parceiros) {
+    public void setParceiros(Set<Parceiro> parceiros) {
         this.parceiros = parceiros;
     }
 
-    public List<Veiculo> getVeiculos() {
+    public Set<Veiculo> getVeiculos() {
         return veiculos;
     }
 
-    public void setVeiculos(List<Veiculo> veiculos) {
+    public void setVeiculos(Set<Veiculo> veiculos) {
         this.veiculos = veiculos;
     }
 }

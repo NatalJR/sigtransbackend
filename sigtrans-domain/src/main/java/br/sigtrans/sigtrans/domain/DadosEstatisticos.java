@@ -1,32 +1,32 @@
 package br.sigtrans.sigtrans.domain;
 
-import io.gumga.domain.GumgaModelUUID;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.Embeddable;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import java.util.List;
+import java.util.Set;
 
-@Entity
-public class DadosEstatisticos extends GumgaModelUUID {
+@Embeddable
+public class DadosEstatisticos {
 
-    @Column(name = "zona")
     private String zona;
-
-    @Column(name = "acidente_trabalho")
     private int acidenteTrabalho;
 
     @ManyToOne
     private TipoAcidente tipoAcidente;
-
     @ManyToOne
     private ClassificacaoAcidente classificacaoAcidente;
-
     @OneToMany
-    private List<Via> vias;
+    private Set<Via> vias;
 
     public DadosEstatisticos() {
+    }
+
+    public DadosEstatisticos(String zona, int acidenteTrabalho, TipoAcidente tipoAcidente, ClassificacaoAcidente classificacaoAcidente, Set<Via> vias) {
+        this.zona = zona;
+        this.acidenteTrabalho = acidenteTrabalho;
+        this.tipoAcidente = tipoAcidente;
+        this.classificacaoAcidente = classificacaoAcidente;
+        this.vias = vias;
     }
 
     public String getZona() {
@@ -61,11 +61,11 @@ public class DadosEstatisticos extends GumgaModelUUID {
         this.classificacaoAcidente = classificacaoAcidente;
     }
 
-    public List<Via> getVias() {
+    public Set<Via> getVias() {
         return vias;
     }
 
-    public void setVias(List<Via> vias) {
+    public void setVias(Set<Via> vias) {
         this.vias = vias;
     }
 }

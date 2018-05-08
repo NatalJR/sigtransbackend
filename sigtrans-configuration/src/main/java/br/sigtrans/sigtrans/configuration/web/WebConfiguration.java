@@ -40,7 +40,7 @@ public class WebConfiguration extends WebMvcConfigurerAdapter implements WebAppl
     };
 
     @Override
-    public void onStartup(ServletContext servletContext) throws ServletException {
+    public void onStartup(ServletContext servletContext) {
         servletContext.setInitParameter("javax.servlet.jsp.jstl.fmt.localizationContext", "messages");
         EnumSet<DispatcherType> dispatcherTypes = EnumSet.of(DispatcherType.REQUEST, DispatcherType.FORWARD);
         CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
@@ -76,10 +76,10 @@ public class WebConfiguration extends WebMvcConfigurerAdapter implements WebAppl
         super.configureMessageConverters(converters);
     }
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
 //        registry.addInterceptor(gumgaRequestFilter());
-    }
+//    }
 
     @Bean
     public GumgaRequestFilterV2 gumgaRequestFilter() {
