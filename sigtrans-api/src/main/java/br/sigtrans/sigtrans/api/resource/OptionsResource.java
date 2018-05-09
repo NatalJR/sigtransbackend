@@ -89,7 +89,8 @@ public class OptionsResource {
         queryObject.setgQuery(gQuery);
 
         //numero grande para pegar todas as opções possiveis
-        queryObject.setPageSize(1500);
+        //PODE SER NECESSARIO ALTERAÇÔES
+        queryObject.setPageSize(Integer.MAX_VALUE);
 
         //busca
 //        List<Estado> estados = estado.pesquisa(queryObject).getValues();
