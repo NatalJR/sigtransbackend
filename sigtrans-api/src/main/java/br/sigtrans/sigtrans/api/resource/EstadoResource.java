@@ -25,5 +25,4 @@ public class EstadoResource extends GumgaAPI<Estado, String>{
     public List<Estado> BuscarEstadoGQuery(@RequestParam String nome) {
         return ((EstadoService) service).buscarEstadoPorNomeGQuery(nome);
     }
-
 }
