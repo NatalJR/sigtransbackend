@@ -46,9 +46,10 @@ public class OptionsResource {
     private PosicaoVeiculoService posicaoVeiculo;
     private LesoesService lesao;
     private LocalEncaminhadoService localEncaminhado;
+    private ProfissaoService profissao;
 
     @Autowired
-    public OptionsResource(EstadoService estado, MunicipioService municipio, BairroService bairro, RuaService rua, AcidenteTrabalhoService acidenteTrabalho, ClassificacaoAcidenteService classificacaoAcidente, CondicoesClimaticasService condicaoClimatica, CondicaoTecnicaService condicaoTecnica, SinalizacaoService sinalizacao, VisibilidadeService visibilidade, PerfilPistaService perfilPista, SemaforoService semaforo, SeparacaoPistaService separacaoPista, EquipamentoControleTrafegoService equipamentoControleTrafego, SinaisPneusService sinaisPneus, AcostamentoService acostamento, PavimentacaoService pavimentacao, TipoViaService tipoVia, ConservacaoViaService conservacaoVia, SentidoViaService sentidoVia, TipoAcidenteService tipoAcidente, MarcaVeiculoService marca, ModeloVeiculoService modelo, CategoriaVeiculoService categoriaVeiculo, GrauInstrucaoService grauInstrucao, CondicaoSegurancaService condicaoSeguranca, PosicaoVeiculoService posicaoVeiculo, LesoesService lesao, LocalEncaminhadoService localEncaminhado) {
+    public OptionsResource(EstadoService estado, MunicipioService municipio, BairroService bairro, RuaService rua, AcidenteTrabalhoService acidenteTrabalho, ClassificacaoAcidenteService classificacaoAcidente, CondicoesClimaticasService condicaoClimatica, CondicaoTecnicaService condicaoTecnica, SinalizacaoService sinalizacao, VisibilidadeService visibilidade, PerfilPistaService perfilPista, SemaforoService semaforo, SeparacaoPistaService separacaoPista, EquipamentoControleTrafegoService equipamentoControleTrafego, SinaisPneusService sinaisPneus, AcostamentoService acostamento, PavimentacaoService pavimentacao, TipoViaService tipoVia, ConservacaoViaService conservacaoVia, SentidoViaService sentidoVia, TipoAcidenteService tipoAcidente, MarcaVeiculoService marca, ModeloVeiculoService modelo, CategoriaVeiculoService categoriaVeiculo, GrauInstrucaoService grauInstrucao, CondicaoSegurancaService condicaoSeguranca, PosicaoVeiculoService posicaoVeiculo, LesoesService lesao, LocalEncaminhadoService localEncaminhado, ProfissaoService profissao) {
         this.estado = estado;
         this.municipio = municipio;
         this.bairro = bairro;
@@ -78,7 +79,9 @@ public class OptionsResource {
         this.posicaoVeiculo = posicaoVeiculo;
         this.lesao = lesao;
         this.localEncaminhado = localEncaminhado;
+        this.profissao = profissao;
     }
+
 
     @RequestMapping(value = "/options", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
@@ -125,7 +128,7 @@ public class OptionsResource {
         map.put("posicaoVeiculo", posicaoVeiculo.pesquisa(queryObject).getValues());
         map.put("lesao", lesao.pesquisa(queryObject).getValues());
         map.put("localEncaminhado", localEncaminhado.pesquisa(queryObject).getValues());
-
+        map.put("profissao", profissao.pesquisa(queryObject).getValues());
         return map;
     }
 
@@ -359,5 +362,13 @@ public class OptionsResource {
 
     public void setLocalEncaminhado(LocalEncaminhadoService localEncaminhado) {
         this.localEncaminhado = localEncaminhado;
+    }
+
+    public ProfissaoService getProfissao() {
+        return profissao;
+    }
+
+    public void setProfissao(ProfissaoService profissao) {
+        this.profissao = profissao;
     }
 }

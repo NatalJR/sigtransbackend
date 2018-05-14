@@ -9,9 +9,8 @@ public class DadosGerais {
 
     private Date dataHora;
     private Date dataHoraSigtrans;
-    //    private String hora;
-//    private String horaSigtrans;
     private String pontoReferencia;
+    private String numero;
 
     //    Não precisa ser BigDecimal
     private Double latitude;
@@ -35,20 +34,12 @@ public class DadosGerais {
     public DadosGerais() {
     }
 
-    public DadosGerais(Date dataHora, Date dataHoraSigtrans, String pontoReferencia, Double latitude, Double longitude, String informacoesAdicionais, String rgoBombeiros, String protocoloBateu, Estado estado, Municipio municipio, Bairro bairro, Rua rua, Rua cruzamento) {
-        this.dataHora = dataHora;
-        this.dataHoraSigtrans = dataHoraSigtrans;
-        this.pontoReferencia = pontoReferencia;
-        this.latitude = latitude;
-        this.longitude = longitude;
-        this.informacoesAdicionais = informacoesAdicionais;
-        this.rgoBombeiros = rgoBombeiros;
-        this.protocoloBateu = protocoloBateu;
-        this.estado = estado;
-        this.municipio = municipio;
-        this.bairro = bairro;
-        this.rua = rua;
-        this.cruzamento = cruzamento;
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 
     public Date getDataHora() {
