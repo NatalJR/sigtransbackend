@@ -15,6 +15,9 @@ public class Rua extends GumgaModelUUID {
     @ManyToOne
     private Municipio municipio;
 
+    @Column(name = "id_parceiro")
+    private Integer idParceiro;
+
     public Rua() {
     }
 
@@ -32,5 +35,13 @@ public class Rua extends GumgaModelUUID {
 
     public void setMunicipio(Municipio municipio) {
         this.municipio = municipio;
+    }
+
+    public Integer getIdParceiro() {
+        return idParceiro;
+    }
+
+    public void setIdParceiro(Integer idParceiro) {
+        this.idParceiro = idParceiro;
     }
 }
