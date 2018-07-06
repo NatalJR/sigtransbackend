@@ -4,7 +4,6 @@ import io.gumga.domain.GumgaModelUUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class ModeloVeiculo extends GumgaModelUUID {
@@ -12,11 +11,8 @@ public class ModeloVeiculo extends GumgaModelUUID {
     @Column(name = "nome_modelo_veiculo")
     private String nome;
 
-    @ManyToOne
-    private MarcaVeiculo marca;
-
-    @ManyToOne
-    private CategoriaVeiculo categoria;
+    @Column(name = "id_parceiro")
+    private String idParceiro;
 
     public ModeloVeiculo() {
     }
@@ -29,19 +25,11 @@ public class ModeloVeiculo extends GumgaModelUUID {
         this.nome = nome;
     }
 
-    public MarcaVeiculo getMarca() {
-        return marca;
+    public String getIdParceiro() {
+        return idParceiro;
     }
 
-    public void setMarca(MarcaVeiculo marca) {
-        this.marca = marca;
-    }
-
-    public CategoriaVeiculo getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(CategoriaVeiculo categoria) {
-        this.categoria = categoria;
+    public void setIdParceiro(String idParceiro) {
+        this.idParceiro = idParceiro;
     }
 }

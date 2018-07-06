@@ -1,2 +1,3 @@
 server:
   context-path: /sigtrans-api
+  port: 8090

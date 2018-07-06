@@ -1,5 +1,6 @@
 package br.sigtrans.sigtrans.api.resource;
 
+import br.sigtrans.sigtrans.domain.Sinalizacao;
 import br.sigtrans.sigtrans.service.*;
 import io.gumga.core.QueryObject;
 import io.gumga.core.gquery.GQuery;
@@ -47,9 +48,10 @@ public class OptionsResource {
     private LesoesService lesao;
     private LocalEncaminhadoService localEncaminhado;
     private ProfissaoService profissao;
+    private SuperficieService superficie;
 
     @Autowired
-    public OptionsResource(EstadoService estado, MunicipioService municipio, BairroService bairro, RuaService rua, AcidenteTrabalhoService acidenteTrabalho, ClassificacaoAcidenteService classificacaoAcidente, CondicoesClimaticasService condicaoClimatica, CondicaoTecnicaService condicaoTecnica, SinalizacaoService sinalizacao, VisibilidadeService visibilidade, PerfilPistaService perfilPista, SemaforoService semaforo, SeparacaoPistaService separacaoPista, EquipamentoControleTrafegoService equipamentoControleTrafego, SinaisPneusService sinaisPneus, AcostamentoService acostamento, PavimentacaoService pavimentacao, TipoViaService tipoVia, ConservacaoViaService conservacaoVia, SentidoViaService sentidoVia, TipoAcidenteService tipoAcidente, MarcaVeiculoService marca, ModeloVeiculoService modelo, CategoriaVeiculoService categoriaVeiculo, GrauInstrucaoService grauInstrucao, CondicaoSegurancaService condicaoSeguranca, PosicaoVeiculoService posicaoVeiculo, LesoesService lesao, LocalEncaminhadoService localEncaminhado, ProfissaoService profissao) {
+    public OptionsResource(EstadoService estado, MunicipioService municipio, BairroService bairro, RuaService rua, AcidenteTrabalhoService acidenteTrabalho, ClassificacaoAcidenteService classificacaoAcidente, CondicoesClimaticasService condicaoClimatica, CondicaoTecnicaService condicaoTecnica, SinalizacaoService sinalizacao, VisibilidadeService visibilidade, PerfilPistaService perfilPista, SemaforoService semaforo, SeparacaoPistaService separacaoPista, EquipamentoControleTrafegoService equipamentoControleTrafego, SinaisPneusService sinaisPneus, AcostamentoService acostamento, PavimentacaoService pavimentacao, TipoViaService tipoVia, ConservacaoViaService conservacaoVia, SentidoViaService sentidoVia, TipoAcidenteService tipoAcidente, MarcaVeiculoService marca, ModeloVeiculoService modelo, CategoriaVeiculoService categoriaVeiculo, GrauInstrucaoService grauInstrucao, CondicaoSegurancaService condicaoSeguranca, PosicaoVeiculoService posicaoVeiculo, LesoesService lesao, LocalEncaminhadoService localEncaminhado, ProfissaoService profissao, SuperficieService superficie) {
         this.estado = estado;
         this.municipio = municipio;
         this.bairro = bairro;
@@ -80,6 +82,7 @@ public class OptionsResource {
         this.lesao = lesao;
         this.localEncaminhado = localEncaminhado;
         this.profissao = profissao;
+        this.superficie = superficie;
     }
 
 
@@ -102,9 +105,9 @@ public class OptionsResource {
         //transformar em JSON
         HashMap<String, List> map = new HashMap<>();
         map.put("estado", estado.pesquisa(queryObject).getValues());
-        map.put("municipio", municipio.pesquisa(queryObject).getValues());
+//        map.put("municipio", municipio.pesquisa(queryObject).getValues());
         map.put("bairro", bairro.pesquisa(queryObject).getValues());
-        map.put("rua", rua.pesquisa(queryObject).getValues());
+//        map.put("rua", rua.pesquisa(queryObject).getValues());
         map.put("acidenteTrabalho", acidenteTrabalho.pesquisa(queryObject).getValues());
         map.put("classificacaoAcidente", classificacaoAcidente.pesquisa(queryObject).getValues());
         map.put("condicaoClimatica", condicaoClimatica.pesquisa(queryObject).getValues());
@@ -129,6 +132,9 @@ public class OptionsResource {
         map.put("lesao", lesao.pesquisa(queryObject).getValues());
         map.put("localEncaminhado", localEncaminhado.pesquisa(queryObject).getValues());
         map.put("profissao", profissao.pesquisa(queryObject).getValues());
+        map.put("sinalizacao", sinalizacao.pesquisa(queryObject).getValues());
+        map.put("superficie", superficie.pesquisa(queryObject).getValues());
+        map.put("visibilidade", visibilidade.pesquisa(queryObject).getValues());
         return map;
     }
 

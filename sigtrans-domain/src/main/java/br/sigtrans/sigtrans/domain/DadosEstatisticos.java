@@ -1,9 +1,6 @@
 package br.sigtrans.sigtrans.domain;
 
-import javax.persistence.Embeddable;
-import javax.persistence.FetchType;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Set;
 
 @Embeddable
@@ -16,7 +13,7 @@ public class DadosEstatisticos {
     private TipoAcidente tipoAcidente;
     @ManyToOne
     private ClassificacaoAcidente classificacaoAcidente;
-    @OneToMany(fetch = FetchType.EAGER)
+    @Embedded
     private Set<Via> vias;
 
     public DadosEstatisticos() {

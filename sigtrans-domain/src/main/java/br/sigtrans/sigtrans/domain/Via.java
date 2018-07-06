@@ -1,13 +1,11 @@
 package br.sigtrans.sigtrans.domain;
 
-import io.gumga.domain.GumgaModelUUID;
-
 import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.Embeddable;
 import javax.persistence.ManyToOne;
 
-@Entity
-public class Via extends GumgaModelUUID {
+@Embeddable
+public class Via {
 
     @Column(name = "faixas")
     private int faixas;
