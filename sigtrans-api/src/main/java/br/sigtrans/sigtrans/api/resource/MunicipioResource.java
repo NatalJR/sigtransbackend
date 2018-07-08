@@ -21,7 +21,7 @@ public class MunicipioResource extends GumgaAPI<Municipio, String> {
     }
 
     @RequestMapping("byname")
-    public List<Municipio> BuscarEstadoGQuery(@RequestParam String nome) {
+    public List<Municipio> BuscarMunicipioGQuery(@RequestParam String nome) {
         return ((MunicipioService) service).buscaMunicipioPorNomeGQuery(nome);
     }
 }
