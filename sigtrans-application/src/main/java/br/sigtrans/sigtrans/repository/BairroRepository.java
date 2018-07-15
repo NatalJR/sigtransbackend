@@ -13,7 +13,7 @@ import java.util.List;
 public interface BairroRepository extends GumgaCrudRepository<Bairro, String> {
 
     //Tras somente os bairros da cidade especificada por MunicipioID
-    @Query("from Bairro as c where c.nome like:nome and c.municipio.id like:municipioId")
-    List<Bairro> buscaBairroPorNome(@Param("nome") String nome, @Param("municipioId") String municipioId);
+    @Query("from Bairro as c where c.municipio.id like:municipioId")
+    List<Bairro> buscaBairroPorNome(@Param("municipioId") String municipioId);
 
 }

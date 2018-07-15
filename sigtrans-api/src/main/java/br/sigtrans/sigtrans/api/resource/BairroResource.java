@@ -21,7 +21,7 @@ public class BairroResource extends GumgaAPI<Bairro, String>{
     }
 
     @RequestMapping("byname")
-    public List<Bairro> BuscarEstadoGQuery(@RequestParam String nome, @RequestParam String municipioId) {
-        return ((BairroService) service).buscarBairroPorNome(nome, municipioId);
+    public List<Bairro> BuscarEstadoGQuery(@RequestParam String municipioId) {
+        return ((BairroService) service).buscarBairroPorNome(municipioId);
     }
 }

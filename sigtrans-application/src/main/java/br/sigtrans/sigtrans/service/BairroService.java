@@ -17,11 +17,9 @@ public class BairroService extends GumgaService<Bairro, String> {
         super(repository);
     }
 
-    public List<Bairro> buscarBairroPorNome(String nome, String municipioId) {
+    public List<Bairro> buscarBairroPorNome(String municipioId) {
 //        GumgaOi oi = new GumgaOi((GumgaThreadScope.organizationCode.get()+"%"));
-        List<Bairro> Bairros = ((BairroRepository) repository).buscaBairroPorNome(nome + "%", municipioId + "%");
-
-        System.out.println(Bairros);
+        List<Bairro> Bairros = ((BairroRepository) repository).buscaBairroPorNome(municipioId + "%");
 
         return Bairros;
 

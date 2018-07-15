@@ -106,7 +106,7 @@ public class OptionsResource {
         HashMap<String, List> map = new HashMap<>();
         map.put("estado", estado.pesquisa(queryObject).getValues());
 //        map.put("municipio", municipio.pesquisa(queryObject).getValues());
-        map.put("bairro", bairro.pesquisa(queryObject).getValues());
+//        map.put("bairro", bairro.pesquisa(queryObject).getValues());
 //        map.put("rua", rua.pesquisa(queryObject).getValues());
         map.put("acidenteTrabalho", acidenteTrabalho.pesquisa(queryObject).getValues());
         map.put("classificacaoAcidente", classificacaoAcidente.pesquisa(queryObject).getValues());
