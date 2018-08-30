@@ -1,0 +1,14 @@
+package br.sigtrans.sigtrans.api.resource;
+
+import br.sigtrans.sigtrans.domain.Paciente;
+import io.gumga.application.GumgaService;
+import io.gumga.presentation.GumgaAPI;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+public class PacienteResource extends GumgaAPI<Paciente, String> {
+    @Autowired
+    public PacienteResource(@Qualifier("pacienteService") GumgaService<Paciente, String> service) {
+        super(service);
+    }
+}

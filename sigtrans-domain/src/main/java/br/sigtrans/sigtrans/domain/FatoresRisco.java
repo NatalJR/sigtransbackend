@@ -4,29 +4,31 @@ import io.gumga.domain.GumgaModelUUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 public class FatoresRisco extends GumgaModelUUID {
 
-    @Column(name = "descricao")
-    private String descricao;
+    @Column(name = "nome")
+    private String nome;
 
     @Column(name = "data_insercao")
     private Date dataInsercao;
 
-    @Column(name = "anos_validade")
-    private int anosValidade;
+    @OneToOne
+    private Set<Integer> anosValidade;
 
     public FatoresRisco() {
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getNome() {
+        return nome;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public Date getDataInsercao() {
@@ -37,11 +39,11 @@ public class FatoresRisco extends GumgaModelUUID {
         this.dataInsercao = dataInsercao;
     }
 
-    public int getAnosValidade() {
+    public Set<Integer> getAnosValidade() {
         return anosValidade;
     }
 
-    public void setAnosValidade(int anosValidade) {
+    public void setAnosValidade(Set<Integer> anosValidade) {
         this.anosValidade = anosValidade;
     }
 }

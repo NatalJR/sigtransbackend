@@ -17,16 +17,16 @@ public class Ocorrencia extends GumgaModelUUID {
     @Embedded
     private DadosEstatisticos dadosEstatisticos;
 
+    @Embedded
+    private AnaliseObito analiseObito;
+
     @ManyToMany(fetch = FetchType.EAGER)
-//    @JoinColumn(name = "ocorrencia_id")
     private Set<Envolvido> envolvidos;
 
     @ManyToMany(fetch = FetchType.EAGER)
-//    @JoinColumn(name = "ocorrencia_id")
     private Set<Parceiro> parceiros;
 
     @ManyToMany(fetch = FetchType.EAGER)
-//    @JoinColumn(name = "ocorrencia_id")
     private Set<Veiculo> veiculos;
 
     public Ocorrencia() {
@@ -70,5 +70,13 @@ public class Ocorrencia extends GumgaModelUUID {
 
     public void setVeiculos(Set<Veiculo> veiculos) {
         this.veiculos = veiculos;
+    }
+
+    public AnaliseObito getAnaliseObito() {
+        return analiseObito;
+    }
+
+    public void setAnaliseObito(AnaliseObito analiseObito) {
+        this.analiseObito = analiseObito;
     }
 }
