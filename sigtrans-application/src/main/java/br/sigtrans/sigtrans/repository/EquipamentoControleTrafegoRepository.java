@@ -1,6 +1,6 @@
 package br.sigtrans.sigtrans.repository;
 
-import br.sigtrans.sigtrans.domain.EquipamentoControleTrafego;
+import br.sigtrans.sigtrans.domain.Ocorrencia.EquipamentoControleTrafego;
 import io.gumga.domain.repository.GumgaCrudRepository;
 import org.springframework.stereotype.Repository;
 

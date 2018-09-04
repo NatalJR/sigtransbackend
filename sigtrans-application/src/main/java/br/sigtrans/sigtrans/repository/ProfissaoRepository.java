@@ -1,6 +1,6 @@
 package br.sigtrans.sigtrans.repository;
 
-import br.sigtrans.sigtrans.domain.Profissao;
+import br.sigtrans.sigtrans.domain.Ocorrencia.Profissao;
 import io.gumga.domain.repository.GumgaCrudRepository;
 import org.springframework.stereotype.Repository;
 

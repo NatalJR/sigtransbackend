@@ -1,6 +1,6 @@
 package br.sigtrans.sigtrans.service;
 
-import br.sigtrans.sigtrans.domain.Municipio;
+import br.sigtrans.sigtrans.domain.Ocorrencia.Municipio;
 import br.sigtrans.sigtrans.repository.MunicipioRepository;
 import io.gumga.application.GumgaService;
 import io.gumga.core.QueryObject;

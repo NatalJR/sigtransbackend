@@ -1,6 +1,6 @@
 package br.sigtrans.sigtrans.service;
 
-import br.sigtrans.sigtrans.domain.Rua;
+import br.sigtrans.sigtrans.domain.Ocorrencia.Rua;
 import br.sigtrans.sigtrans.repository.RuaRepository;
 import io.gumga.application.GumgaService;
 import io.gumga.core.QueryObject;

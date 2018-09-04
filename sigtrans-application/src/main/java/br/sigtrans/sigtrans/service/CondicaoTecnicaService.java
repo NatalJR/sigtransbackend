@@ -1,6 +1,7 @@
 package br.sigtrans.sigtrans.service;
 
-import br.sigtrans.sigtrans.domain.CondicaoTecnica;
+
+import br.sigtrans.sigtrans.domain.Via.CondicaoTecnica;
 import io.gumga.application.GumgaService;
 import io.gumga.domain.repository.GumgaCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;

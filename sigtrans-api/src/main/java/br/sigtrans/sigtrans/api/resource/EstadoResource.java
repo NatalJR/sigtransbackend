@@ -1,6 +1,6 @@
 package br.sigtrans.sigtrans.api.resource;
 
-import br.sigtrans.sigtrans.domain.Estado;
+import br.sigtrans.sigtrans.domain.Ocorrencia.Estado;
 import br.sigtrans.sigtrans.service.EstadoService;
 import io.gumga.application.GumgaService;
 import io.gumga.presentation.GumgaAPI;

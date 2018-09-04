@@ -1,9 +1,9 @@
 package br.sigtrans.sigtrans.configuration.database;
 
+import br.sigtrans.sigtrans.configuration.application.ApplicationConstants;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import io.gumga.core.GumgaValues;
-import br.sigtrans.sigtrans.configuration.application.ApplicationConstants;
 import io.gumga.domain.CriterionParser;
 import io.gumga.domain.GumgaQueryParserProvider;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +13,10 @@ import org.springframework.context.annotation.Configuration;
 import javax.sql.DataSource;
 import java.util.Map;
 import java.util.Properties;
+
+enum Database {
+    POSTGRES, MYSQL, ORACLE, H2
+}
 
 @Configuration
 public class DatabaseConfiguration {
@@ -32,7 +36,7 @@ public class DatabaseConfiguration {
         HikariConfig config = new HikariConfig();
 
         Integer minimumIdle = Integer.valueOf(getProperties().getProperty("dataSource.minimumIdle", "5"));
-        Integer maximumPoolSize = Integer.valueOf(getProperties().getProperty("dataSource.maximumPoolSize", "15"));;
+        Integer maximumPoolSize = Integer.valueOf(getProperties().getProperty("dataSource.maximumPoolSize", "15"));
 
         config.setMinimumIdle(minimumIdle);
         config.setMaximumPoolSize(maximumPoolSize);
@@ -69,8 +73,4 @@ public class DatabaseConfiguration {
             default: return GumgaQueryParserProvider.getH2LikeMap();
         }
     }
-}
-
-enum Database {
-    POSTGRES, MYSQL, ORACLE, H2;
 }

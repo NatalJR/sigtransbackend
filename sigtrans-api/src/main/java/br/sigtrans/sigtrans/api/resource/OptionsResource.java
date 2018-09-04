@@ -1,6 +1,5 @@
 package br.sigtrans.sigtrans.api.resource;
 
-import br.sigtrans.sigtrans.domain.Sinalizacao;
 import br.sigtrans.sigtrans.service.*;
 import io.gumga.core.QueryObject;
 import io.gumga.core.gquery.GQuery;

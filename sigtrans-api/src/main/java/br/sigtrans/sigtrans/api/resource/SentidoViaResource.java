@@ -1,7 +1,7 @@
 package br.sigtrans.sigtrans.api.resource;
 
 
-import br.sigtrans.sigtrans.domain.SentidoVia;
+import br.sigtrans.sigtrans.domain.Via.SentidoVia;
 import io.gumga.application.GumgaService;
 import io.gumga.presentation.GumgaAPI;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,7 @@
 package br.sigtrans.sigtrans.repository;
 
-import br.sigtrans.sigtrans.domain.ConservacaoVia;
+
+import br.sigtrans.sigtrans.domain.Via.ConservacaoVia;
 import io.gumga.domain.repository.GumgaCrudRepository;
 import org.springframework.stereotype.Repository;
 

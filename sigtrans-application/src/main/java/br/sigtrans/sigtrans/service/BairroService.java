@@ -1,6 +1,6 @@
 package br.sigtrans.sigtrans.service;
 
-import br.sigtrans.sigtrans.domain.Bairro;
+import br.sigtrans.sigtrans.domain.Ocorrencia.Bairro;
 import br.sigtrans.sigtrans.repository.BairroRepository;
 import io.gumga.application.GumgaService;
 import io.gumga.domain.repository.GumgaCrudRepository;

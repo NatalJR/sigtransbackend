@@ -1,6 +1,6 @@
 package br.sigtrans.sigtrans.repository;
 
-import br.sigtrans.sigtrans.domain.Estado;
+import br.sigtrans.sigtrans.domain.Ocorrencia.Estado;
 import io.gumga.domain.repository.GumgaCrudRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
