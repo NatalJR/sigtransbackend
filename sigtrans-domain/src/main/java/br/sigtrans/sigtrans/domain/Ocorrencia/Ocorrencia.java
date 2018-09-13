@@ -21,19 +21,19 @@ public class Ocorrencia extends GumgaModelUUID {
     @JoinColumn(name = "analiseobito_id")
     private AnaliseObito analiseObito;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
     @JoinTable(name = "ocorrencia_has_envolvido", joinColumns =
             {@JoinColumn(name = "ocorrencia_id")}, inverseJoinColumns =
             {@JoinColumn(name = "envolvido_id")})
     private Set<Envolvido> envolvidos;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
     @JoinTable(name = "ocorrencia_has_parceiro", joinColumns =
             {@JoinColumn(name = "ocorrencia_id")}, inverseJoinColumns =
             {@JoinColumn(name = "parceiro_id")})
     private Set<Parceiro> parceiros;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
     @JoinTable(name = "ocorrencia_has_veiculo", joinColumns =
             {@JoinColumn(name = "ocorrencia_id")}, inverseJoinColumns =
             {@JoinColumn(name = "veiculo_id")})

@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import java.util.Date;
 
 @Entity
-public class CondutasRisco extends GumgaModelUUID {
+public class FatorRisco extends GumgaModelUUID {
 
     @Column(name = "nome")
     private String nome;
@@ -15,10 +15,7 @@ public class CondutasRisco extends GumgaModelUUID {
     @Column(name = "data_insercao")
     private Date dataInsercao;
 
-//    @OneToMany
-//    private Set<Integer> anosValidade;
-
-    public CondutasRisco() {
+    public FatorRisco() {
     }
 
     public String getNome() {
@@ -36,12 +33,4 @@ public class CondutasRisco extends GumgaModelUUID {
     public void setDataInsercao(Date dataInsercao) {
         this.dataInsercao = dataInsercao;
     }
-
-//    public Set<Integer> getAnosValidade() {
-//        return anosValidade;
-//    }
-//
-//    public void setAnosValidade(Set<Integer> anosValidade) {
-//        this.anosValidade = anosValidade;
-//    }
 }

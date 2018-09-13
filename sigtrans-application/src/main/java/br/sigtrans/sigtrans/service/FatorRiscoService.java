@@ -1,15 +1,15 @@
 package br.sigtrans.sigtrans.service;
 
-import br.sigtrans.sigtrans.domain.Obitos.CondutasRisco;
+import br.sigtrans.sigtrans.domain.Obitos.FatorRisco;
 import io.gumga.application.GumgaService;
 import io.gumga.domain.repository.GumgaCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CondutasRiscoService extends GumgaService<CondutasRisco, String> {
+public class FatorRiscoService extends GumgaService<FatorRisco, String> {
     @Autowired
-    public CondutasRiscoService(GumgaCrudRepository<CondutasRisco, String> repository) {
+    public FatorRiscoService(GumgaCrudRepository<FatorRisco, String> repository) {
         super(repository);
     }
 }

@@ -1,15 +1,16 @@
 package br.sigtrans.sigtrans.service;
 
-import br.sigtrans.sigtrans.domain.Obitos.FatoresGravidade;
+import br.sigtrans.sigtrans.domain.Obitos.FatorCondutaGravidadeAno;
 import io.gumga.application.GumgaService;
 import io.gumga.domain.repository.GumgaCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FatoresGravidadeService extends GumgaService<FatoresGravidade, String> {
+public class FatorCondutaGravidadeAnoService extends GumgaService<FatorCondutaGravidadeAno, String> {
     @Autowired
-    public FatoresGravidadeService(GumgaCrudRepository<FatoresGravidade, String> repository) {
+    public FatorCondutaGravidadeAnoService(GumgaCrudRepository<FatorCondutaGravidadeAno, String> repository) {
         super(repository);
     }
+
 }

@@ -20,7 +20,7 @@ public class DadosEstatisticos extends GumgaModelUUID {
     @ManyToOne
     private ClassificacaoAcidente classificacaoAcidente;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Via> vias;
 
     public DadosEstatisticos() {
