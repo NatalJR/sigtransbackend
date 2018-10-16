@@ -11,8 +11,8 @@ public class DadosEstatisticos extends GumgaModelUUID {
     @Column(name = "zona")
     private String zona;
 
-    @Column(name = "acidente_trabalho")
-    private int acidenteTrabalho;
+    @ManyToOne
+    private AcidenteTrabalho acidenteTrabalho;
 
     @ManyToOne
     private TipoAcidente tipoAcidente;
@@ -26,7 +26,7 @@ public class DadosEstatisticos extends GumgaModelUUID {
     public DadosEstatisticos() {
     }
 
-    public DadosEstatisticos(String zona, int acidenteTrabalho, TipoAcidente tipoAcidente, ClassificacaoAcidente classificacaoAcidente, Set<Via> vias) {
+    public DadosEstatisticos(String zona, AcidenteTrabalho acidenteTrabalho, TipoAcidente tipoAcidente, ClassificacaoAcidente classificacaoAcidente, Set<Via> vias) {
         this.zona = zona;
         this.acidenteTrabalho = acidenteTrabalho;
         this.tipoAcidente = tipoAcidente;
@@ -42,11 +42,11 @@ public class DadosEstatisticos extends GumgaModelUUID {
         this.zona = zona;
     }
 
-    public int getAcidenteTrabalho() {
+    public AcidenteTrabalho getAcidenteTrabalho() {
         return acidenteTrabalho;
     }
 
-    public void setAcidenteTrabalho(int acidenteTrabalho) {
+    public void setAcidenteTrabalho(AcidenteTrabalho acidenteTrabalho) {
         this.acidenteTrabalho = acidenteTrabalho;
     }
 

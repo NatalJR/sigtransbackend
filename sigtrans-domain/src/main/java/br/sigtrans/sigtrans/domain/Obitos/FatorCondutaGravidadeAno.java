@@ -10,21 +10,22 @@ import java.util.Set;
 public class FatorCondutaGravidadeAno extends GumgaModelUUID {
 
     @OneToOne
+    @MapsId
     private Ano ano;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
     @JoinTable(name = "fatorcondutagravidadeano_fatoresrisco", joinColumns =
             {@JoinColumn(name = "fatorcondutagravidadeano_id")}, inverseJoinColumns =
             {@JoinColumn(name = "fatoresrisco_id")})
     private Set<FatorRisco> fatoresRisco;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
     @JoinTable(name = "fatorcondutagravidadeano_fatoresgravidade", joinColumns =
             {@JoinColumn(name = "fatorcondutagravidadeano_id")}, inverseJoinColumns =
             {@JoinColumn(name = "fatoresgravidade_id")})
     private Set<FatorGravidade> fatoresGravidade;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
     @JoinTable(name = "fatorcondutagravidadeano_condutasrisco", joinColumns =
             {@JoinColumn(name = "fatorcondutagravidadeano_id")}, inverseJoinColumns =
             {@JoinColumn(name = "condutasrisco_id")})
