@@ -18,14 +18,13 @@ public class Ocorrencia extends GumgaModelUUID {
     private DadosEstatisticos dadosEstatisticos;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "analiseobito_id")
     private AnaliseObito analiseObito;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-    @JoinTable(name = "ocorrencia_has_envolvido", joinColumns =
+    @JoinTable(name = "ocorrencia_has_vitima", joinColumns =
             {@JoinColumn(name = "ocorrencia_id")}, inverseJoinColumns =
-            {@JoinColumn(name = "envolvido_id")})
-    private Set<Envolvido> envolvidos;
+            {@JoinColumn(name = "vitima_id")})
+    private Set<Vitima> envolvidos;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
     @JoinTable(name = "ocorrencia_has_parceiro", joinColumns =
@@ -66,11 +65,11 @@ public class Ocorrencia extends GumgaModelUUID {
         this.analiseObito = analiseObito;
     }
 
-    public Set<Envolvido> getEnvolvidos() {
+    public Set<Vitima> getEnvolvidos() {
         return envolvidos;
     }
 
-    public void setEnvolvidos(Set<Envolvido> envolvidos) {
+    public void setEnvolvidos(Set<Vitima> envolvidos) {
         this.envolvidos = envolvidos;
     }
 
@@ -89,4 +88,5 @@ public class Ocorrencia extends GumgaModelUUID {
     public void setVeiculos(Set<Veiculo> veiculos) {
         this.veiculos = veiculos;
     }
+
 }

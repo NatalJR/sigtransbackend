@@ -2,28 +2,31 @@ package br.sigtrans.sigtrans.domain.Obitos;
 
 import io.gumga.domain.GumgaModelUUID;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToMany;
 import java.util.Set;
 
 @Entity
 public class AnaliseObito extends GumgaModelUUID {
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-    @JoinTable(name = "analiseobito_fatorriscovalor", joinColumns =
-            {@JoinColumn(name = "analiseobito_id")}, inverseJoinColumns =
-            {@JoinColumn(name = "fatorriscovalor_id")})
+//    @JoinTable(name = "analiseobito_fatorriscovalor", joinColumns =
+//            {@JoinColumn(name = "analiseobito_id")}, inverseJoinColumns =
+//            {@JoinColumn(name = "fatorriscovalor_id")})
     private Set<FatorRiscoValor> fatoresRisco;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-    @JoinTable(name = "analiseobito_condutariscovalor", joinColumns =
-            {@JoinColumn(name = "analiseobito_id")}, inverseJoinColumns =
-            {@JoinColumn(name = "condutariscovalor_id")})
+//    @JoinTable(name = "analiseobito_condutariscovalor", joinColumns =
+//            {@JoinColumn(name = "analiseobito_id")}, inverseJoinColumns =
+//            {@JoinColumn(name = "condutariscovalor_id")})
     private Set<CondutaRiscoValor> condutasRisco;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-    @JoinTable(name = "analiseobito_fatorgravidadevalor", joinColumns =
-            {@JoinColumn(name = "analiseobito_id")}, inverseJoinColumns =
-            {@JoinColumn(name = "fatorgravidadevalor_id")})
+//    @JoinTable(name = "analiseobito_fatorgravidadevalor", joinColumns =
+//            {@JoinColumn(name = "analiseobito_id")}, inverseJoinColumns =
+//            {@JoinColumn(name = "fatorgravidadevalor_id")})
     private Set<FatorGravidadeValor> fatoresGravidade;
 
     public AnaliseObito() {

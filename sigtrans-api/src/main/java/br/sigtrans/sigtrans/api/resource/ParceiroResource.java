@@ -15,4 +15,9 @@ public class ParceiroResource extends GumgaAPI<Parceiro, String> {
     public ParceiroResource(@Qualifier("parceiroService") GumgaService<Parceiro, String> service) {
         super(service);
     }
+
+//    @RequestMapping("byid")
+//    public List<Parceiro> BuscarMunicipioGQuery(@RequestParam String id) {
+//        return ((ParceiroService) service).buscaParceiroGQuery(id);
+//    }
 }

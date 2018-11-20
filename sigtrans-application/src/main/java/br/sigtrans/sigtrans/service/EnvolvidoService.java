@@ -12,4 +12,17 @@ public class EnvolvidoService extends GumgaService<Envolvido, String> {
     public EnvolvidoService(GumgaCrudRepository<Envolvido, String> repository) {
         super(repository);
     }
+
+//    public List<Envolvido> buscaEnvolvidoGQuery(String id) {
+//        List<Envolvido> envolvidos = ((EnvolvidoRepository) repository).buscaEnvolvido(id + "%");
+//
+//        GQuery gQuery = new GQuery(new Criteria("obj.id", ComparisonOperator.CONTAINS, id));
+//
+//        QueryObject queryObject = new QueryObject();
+//        queryObject.setgQuery(gQuery);
+//        queryObject.setPageSize(10);
+//
+//        return repository.findAll(gQuery);
+//
+//    }
 }

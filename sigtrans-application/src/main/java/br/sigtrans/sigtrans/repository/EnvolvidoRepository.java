@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EnvolvidoRepository extends GumgaCrudRepository<Envolvido, String> {
+//    @Query("from envolvido as c where c.id like:id")
+//    List<Envolvido> buscaEnvolvido(@Param("id") String id);
 }

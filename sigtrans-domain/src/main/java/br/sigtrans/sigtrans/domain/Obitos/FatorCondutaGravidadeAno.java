@@ -14,21 +14,21 @@ public class FatorCondutaGravidadeAno extends GumgaModelUUID {
     private Ano ano;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
-    @JoinTable(name = "fatorcondutagravidadeano_fatoresrisco", joinColumns =
-            {@JoinColumn(name = "fatorcondutagravidadeano_id")}, inverseJoinColumns =
-            {@JoinColumn(name = "fatoresrisco_id")})
+//    @JoinTable(name = "fatorcondutagravidadeano_fatoresrisco", joinColumns =
+//            {@JoinColumn(name = "fatorcondutagravidadeano_id")}, inverseJoinColumns =
+//            {@JoinColumn(name = "fatoresrisco_id")})
     private Set<FatorRisco> fatoresRisco;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
-    @JoinTable(name = "fatorcondutagravidadeano_fatoresgravidade", joinColumns =
-            {@JoinColumn(name = "fatorcondutagravidadeano_id")}, inverseJoinColumns =
-            {@JoinColumn(name = "fatoresgravidade_id")})
+//    @JoinTable(name = "fatorcondutagravidadeano_fatoresgravidade", joinColumns =
+//            {@JoinColumn(name = "fatorcondutagravidadeano_id")}, inverseJoinColumns =
+//            {@JoinColumn(name = "fatoresgravidade_id")})
     private Set<FatorGravidade> fatoresGravidade;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
-    @JoinTable(name = "fatorcondutagravidadeano_condutasrisco", joinColumns =
-            {@JoinColumn(name = "fatorcondutagravidadeano_id")}, inverseJoinColumns =
-            {@JoinColumn(name = "condutasrisco_id")})
+//    @JoinTable(name = "fatorcondutagravidadeano_condutasrisco", joinColumns =
+//            {@JoinColumn(name = "fatorcondutagravidadeano_id")}, inverseJoinColumns =
+//            {@JoinColumn(name = "condutarisco_id")})
     private Set<CondutaRisco> condutasRisco;
 
     public FatorCondutaGravidadeAno() {

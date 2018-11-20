@@ -1,5 +1,6 @@
 package br.sigtrans.sigtrans.domain.Ocorrencia;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.ManyToOne;
 import java.util.Date;
@@ -14,6 +15,7 @@ public class DadosGerais {
     private Double latitude;
     private Double longitude;
     private String informacoesAdicionais;
+    @Column(name = "rgoBombeiros", unique = true)
     private String rgoBombeiros;
     private String protocoloBateu;
 

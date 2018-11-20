@@ -1,6 +1,5 @@
 package br.sigtrans.sigtrans.api.resource;
 
-
 import br.sigtrans.sigtrans.domain.Via.TipoVia;
 import io.gumga.application.GumgaService;
 import io.gumga.presentation.GumgaAPI;
