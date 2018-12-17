@@ -23,6 +23,7 @@ public class OcorrenciaService extends GumgaService<Ocorrencia, String> {
 
     public List<Ocorrencia> buscarObitos(Integer pageSize) {
         String nome = "Óbito";
+        //AAA
 //        GumgaOi oi = new GumgaOi((GumgaThreadScope.organizationCode.get()+"%"));
         List<Ocorrencia> obitos = ((OcorrenciaRepository) repository).buscaObito(nome + "%");
 
