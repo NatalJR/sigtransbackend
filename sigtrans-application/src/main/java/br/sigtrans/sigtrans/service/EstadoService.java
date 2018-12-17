@@ -25,7 +25,7 @@ public class EstadoService extends GumgaService<Estado, String> {
     }
 
     public List<Estado> buscarEstadoPorNomeGQuery(String nome) {
-//        GumgaOi oi = new GumgaOi((GumgaThreadScope.organizationCode.get()+"%"));
+//        GumgaOi oi = new        GumgaOi((GumgaThreadScope.organizationCode.get()+"%"));
         List<Estado> estado = ((EstadoRepository) repository).buscaEstadoPorNome(nome + "%");
 
         GQuery gQuery = new GQuery(new Criteria("obj.nome", ComparisonOperator.EQUAL, nome));
