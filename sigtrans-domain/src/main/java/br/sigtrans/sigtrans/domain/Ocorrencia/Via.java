@@ -55,7 +55,18 @@ public class Via extends GumgaModelUUID {
     @ManyToOne
     private SinaisPneus sinaisPneus;
 
+    @ManyToOne
+    private CondicoesClimaticas condicoesClimaticas;
+
     public Via() {
+    }
+
+    public CondicoesClimaticas getCondicoesClimaticas() {
+        return condicoesClimaticas;
+    }
+
+    public void setCondicoesClimaticas(CondicoesClimaticas condicoesClimaticas) {
+        this.condicoesClimaticas = condicoesClimaticas;
     }
 
     public int getFaixas() {

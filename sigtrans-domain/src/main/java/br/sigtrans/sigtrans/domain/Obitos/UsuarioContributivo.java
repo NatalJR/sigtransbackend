@@ -11,7 +11,7 @@ public class UsuarioContributivo extends GumgaModelUUID {
     private String abreviatura;
 
     @Column(name = "descricao")
-    private String descicao;
+    private String descricao;
 
     public UsuarioContributivo() {
     }
@@ -25,10 +25,10 @@ public class UsuarioContributivo extends GumgaModelUUID {
     }
 
     public String getDescicao() {
-        return descicao;
+        return descricao;
     }
 
     public void setDescicao(String descicao) {
-        this.descicao = descicao;
+        this.descricao = descicao;
     }
 }

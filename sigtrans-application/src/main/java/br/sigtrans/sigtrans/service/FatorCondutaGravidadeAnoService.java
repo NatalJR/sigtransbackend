@@ -17,17 +17,7 @@ public class FatorCondutaGravidadeAnoService extends GumgaService<FatorCondutaGr
 
     public FatorCondutaGravidadeAno buscarFCGAPorAnoGQuery(String ano) {
         FatorCondutaGravidadeAno FCGA = ((FatorCondutaGravidadeAnoRepository) repository).buscaFCGPorAno(ano + "%");
-//        GumgaOi oi = new GumgaOi((GumgaThreadScope.organizationCode.get()+"%"));
-
-
-//        GQuery gQuery = new GQuery(new Criteria("obj.ano.ano", ComparisonOperator.EQUAL, ano));
-//
-//        QueryObject queryObject = new QueryObject();
-//        queryObject.setgQuery(gQuery);
-//        queryObject.setPageSize(10);
-
         return FCGA;
-
     }
 
 }

@@ -1,6 +1,7 @@
 package br.sigtrans.sigtrans.service;
 
 import br.sigtrans.sigtrans.domain.Ocorrencia.Ocorrencia;
+import br.sigtrans.sigtrans.domain.Ocorrencia.Vitima;
 import br.sigtrans.sigtrans.repository.OcorrenciaRepository;
 import io.gumga.application.GumgaService;
 import io.gumga.core.QueryObject;
@@ -11,7 +12,9 @@ import io.gumga.domain.repository.GumgaCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class OcorrenciaService extends GumgaService<Ocorrencia, String> {
@@ -38,6 +41,25 @@ public class OcorrenciaService extends GumgaService<Ocorrencia, String> {
 
         return repository.findAll(gQuery);
 
+    }
+
+    public List<Ocorrencia> buscarOcorrencias() {
+        return ((OcorrenciaRepository) repository).buscaOcorrencias();
+    }
+
+    public Set<Ocorrencia> buscarObitosPorGrauDeLesao() {
+        List<Ocorrencia> Ocorrencias = ((OcorrenciaRepository) repository).buscaOcorrencias();
+        Set<Ocorrencia> response = new HashSet<>();
+        for (Ocorrencia ocorrencia : Ocorrencias) {
+            Set<Vitima> Vitimas = ocorrencia.getEnvolvidos();
+            for (Vitima vitima : Vitimas) {
+                if (vitima.getLesao().getNome().contains("Óbito")) {
+                    response.add(ocorrencia);
+                    break;
+                }
+            }
+        }
+        return response;
     }
 
 }

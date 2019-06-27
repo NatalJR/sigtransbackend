@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/ocorrencias")
@@ -28,5 +29,17 @@ public class OcorrenciaResource extends GumgaAPI<Ocorrencia, String> {
         }
         return ((OcorrenciaService) service).buscarObitos(pageSize);
     }
+
+    @RequestMapping("/geral")
+    public List<Ocorrencia> BuscarOcorrenciasGeral() {
+        return ((OcorrenciaService) service).buscarOcorrencias();
+    }
+
+    @RequestMapping("/obitos/porlesao")
+    public Set<Ocorrencia> BuscarObitosPorGrauDeLesao() {
+        return ((OcorrenciaService) service).buscarObitosPorGrauDeLesao();
+    }
+
+
 
 }

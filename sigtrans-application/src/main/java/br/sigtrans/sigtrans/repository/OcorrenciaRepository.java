@@ -11,8 +11,10 @@ import java.util.List;
 @Repository
 public interface OcorrenciaRepository extends GumgaCrudRepository<Ocorrencia, String> {
 
-    @Query("from Ocorrencia as c where c.dadosEstatisticos.classificacaoAcidente.nome like:nome")
+    @Query("from Ocorrencia as o where o.dadosEstatisticos.classificacaoAcidente.nome like:nome")
     List<Ocorrencia> buscaObito(@Param("nome") String nome);
 
+    @Query("from Ocorrencia as o group by o.id ")
+    List<Ocorrencia> buscaOcorrencias();
 
 }
