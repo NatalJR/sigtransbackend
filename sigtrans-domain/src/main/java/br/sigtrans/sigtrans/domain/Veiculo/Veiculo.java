@@ -1,8 +1,6 @@
 package br.sigtrans.sigtrans.domain.Veiculo;
 
 import br.sigtrans.sigtrans.domain.Ocorrencia.Envolvido;
-import br.sigtrans.sigtrans.domain.Ocorrencia.Estado;
-import br.sigtrans.sigtrans.domain.Ocorrencia.Municipio;
 import io.gumga.domain.GumgaModelUUID;
 
 import javax.persistence.Column;
@@ -12,11 +10,11 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Veiculo extends GumgaModelUUID {
 
-    @ManyToOne
-    private MarcaVeiculo marca;
+    @Column(name = "marca")
+    private String marca;
 
-    @ManyToOne
-    private ModeloVeiculo modelo;
+    @Column(name = "modelo")
+    private String modelo;
 
     @Column(name = "numero_ocupantes")
     private int numeroOcupantes;
@@ -36,29 +34,7 @@ public class Veiculo extends GumgaModelUUID {
     @ManyToOne
     private Envolvido condutor;
 
-    @ManyToOne
-    private Estado estado;
-
-    @ManyToOne
-    private Municipio municipio;
-
     public Veiculo() {
-    }
-
-    public MarcaVeiculo getMarca() {
-        return marca;
-    }
-
-    public void setMarca(MarcaVeiculo marca) {
-        this.marca = marca;
-    }
-
-    public ModeloVeiculo getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(ModeloVeiculo modelo) {
-        this.modelo = modelo;
     }
 
     public int getNumeroOcupantes() {
@@ -109,19 +85,4 @@ public class Veiculo extends GumgaModelUUID {
         this.condutor = condutor;
     }
 
-    public Estado getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Estado estado) {
-        this.estado = estado;
-    }
-
-    public Municipio getMunicipio() {
-        return municipio;
-    }
-
-    public void setMunicipio(Municipio municipio) {
-        this.municipio = municipio;
-    }
 }

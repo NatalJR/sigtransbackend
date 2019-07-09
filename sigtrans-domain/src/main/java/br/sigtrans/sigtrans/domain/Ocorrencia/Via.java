@@ -38,6 +38,9 @@ public class Via extends GumgaModelUUID {
     private Superficie superficie;
 
     @ManyToOne
+    private CondicoesClimaticas condicoesClimaticas;
+
+    @ManyToOne
     private EquipamentoControleTrafego equipamentoControleTrafego;
 
     @ManyToOne
@@ -45,6 +48,9 @@ public class Via extends GumgaModelUUID {
 
     @ManyToOne
     private Visibilidade visibilidade;
+
+    @ManyToOne
+    private CondicaoTecnica condicaoTecnica;
 
     @ManyToOne
     private Acostamento acostamento;
@@ -55,8 +61,7 @@ public class Via extends GumgaModelUUID {
     @ManyToOne
     private SinaisPneus sinaisPneus;
 
-    @ManyToOne
-    private CondicoesClimaticas condicoesClimaticas;
+
 
     public Via() {
     }
@@ -187,5 +192,13 @@ public class Via extends GumgaModelUUID {
 
     public void setVelocidadeMaxima(int velocidadeMaxima) {
         this.velocidadeMaxima = velocidadeMaxima;
+    }
+
+    public CondicaoTecnica getCondicaoTecnica() {
+        return condicaoTecnica;
+    }
+
+    public void setCondicaoTecnica(CondicaoTecnica condicaoTecnica) {
+        this.condicaoTecnica = condicaoTecnica;
     }
 }

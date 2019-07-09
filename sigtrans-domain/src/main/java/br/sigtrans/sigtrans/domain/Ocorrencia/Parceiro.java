@@ -1,8 +1,6 @@
 package br.sigtrans.sigtrans.domain.Ocorrencia;
 
 import io.gumga.domain.GumgaModelUUID;
-import io.gumga.domain.domains.GumgaEMail;
-import io.gumga.domain.domains.GumgaPhoneNumber;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,14 +18,8 @@ public class Parceiro extends GumgaModelUUID {
     @ManyToOne
     private Municipio municipio;
 
-    @Column(name = "nome_contato")
-    private String nomeContato;
-
-    @Column(name = "telefone_contato")
-    private GumgaPhoneNumber telefone;
-
-    @Column(name = "email")
-    private GumgaEMail email;
+    @Column(name = "observacao")
+    private String observacao;
 
     public Parceiro() {
     }
@@ -56,27 +48,11 @@ public class Parceiro extends GumgaModelUUID {
         this.municipio = municipio;
     }
 
-    public String getNomeContato() {
-        return nomeContato;
+    public String getObs() {
+        return observacao;
     }
 
-    public void setNomeContato(String nomeContato) {
-        this.nomeContato = nomeContato;
-    }
-
-    public GumgaPhoneNumber getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(GumgaPhoneNumber telefone) {
-        this.telefone = telefone;
-    }
-
-    public GumgaEMail getEmail() {
-        return email;
-    }
-
-    public void setEmail(GumgaEMail email) {
-        this.email = email;
+    public void setObs(String observacao) {
+        this.observacao = observacao;
     }
 }

@@ -15,8 +15,11 @@ public class DadosGerais {
     private Double latitude;
     private Double longitude;
     private String informacoesAdicionais;
+
     @Column(name = "rgoBombeiros", unique = true)
     private String rgoBombeiros;
+
+    @Column(name = "protocoloBateu", unique = true)
     private String protocoloBateu;
 
     @ManyToOne
