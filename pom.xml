@@ -346,6 +346,7 @@
                 <version>${jaybird.jdk18.version}</version>
             </dependency>
 
+
         </dependencies>
     </dependencyManagement>
     <build>
